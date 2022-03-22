@@ -1,7 +1,7 @@
 html
 {
   alignment-baseline: center;
-  background-color: #733bb3
+  background-color: #733bb3;
   background-image: linear-gradient(41deg, #733bb3, #737be3, #ffffff, #737be3, #733bb3);
   padding: 15px;
 }
