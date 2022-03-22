@@ -1,9 +1,17 @@
 html
 {
-  background-color: LightGreen;
+  alignment-baseline: center;
+  background: Purple linear-gradient(red, yellow);
+  padding: 15px;
+}
+title
+{
+  font-size:15vw;
+  font-weight: bold;
 }
 body
 {
+  padding: 20px;
   background-color: SlateBlue;
   font-family: arial;
   font-size: 30pt;
