@@ -4,19 +4,19 @@ html
   background-color: #733bb3;
   background-image: linear-gradient(41deg, #733bb3, #737be3, #ffffff, #737be3, #733bb3);
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: center;
   background-attachment: scroll;
   padding: 15px;
 }
 title
 {
-  font-size:15vw;
+  font-size: 15vw;
   font-weight: bold;
 }
 body
 {
   padding: 20px;
-  background-color: SlateBlue;
+  background-color: #0000ff0f;
   font-family: arial;
   font-size: 30pt;
 }
