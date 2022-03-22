@@ -4,8 +4,9 @@ html
   background-color: #733bb3;
   background-image: linear-gradient(41deg, #733bb3, #737be3, #ffffff, #737be3, #733bb3);
   background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: scroll;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
   padding: 15px;
 }
 title
