@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0f">
     <link href="css/styles.css" rel="stylesheet"/>
 	<title>Ariasa Project</title>
+	<script>
+	function expand() {
+	  var x = document.getElementById("navList");
+	  if (x.display === "none") {
+		x.display = "block";
+	  } else {
+		x.display = "none";
+	  }
+	}
+	</script>
   </head>
   <body>
-    <div class="topnav">
-  	<a class="active" href="#home">Main</a>
-  	<a href="#tools">Tools</a>
-  	<a href="#help">Help</a>
-  	<a href="#about">About</a>
-	<a class="search-container">
-		<button>Search</button>
-	    	<button onclick="document.getElementById('search').value=''">Clear</button>
-		<input type="text" placeholder="Search.." id="search"></input>
+	<div class="topnav">
+		<a class="active" href="#home">Main</a>
+		<a href="#tools" id="navList">Tools</a>
+		<a href="#extras" id="navList">Extras</a>
+		<div class="searchbar" id="navList">
+			<input type="search" placeholder="Search..." id="topnav-search"></input>
+			<img src="img/ic/eraser.png" alt="Clear" width="25px" height="25px" onclick="getElementById('topnav-search').value=''">
+			<img src="img/ic/search.png" alt="Search" width="25px" height="25px">
+		</div>
+		<img src="img/ic/nav-menu-active.svg" alt="Menu" width="40px" height="40px" class="expand" onclick="expand()">
 	</div>
-    </div>
     <h1>
 	  Ariasa Project
 	  <br>Main Page</br>
