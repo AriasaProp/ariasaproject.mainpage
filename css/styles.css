@@ -20,6 +20,9 @@ body {
   text-align: center center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 50%;
+  height: 100%;
+  line-height: 100%;
 }
 .topnav a:hover {
   border: 3px solid grey;
@@ -42,21 +45,30 @@ body {
   background: #3ba1d4;
 }
 .topnav img.expand {
+  font-size: 50%;
+  height: 100%;
+  line-height: 100%;
   display: none;
 }
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
     display: none;
     float: none;
-    transition: .2s;
+    transition: .5s;
+    font-size: 50%;
+    height: 100%;
+    line-height: 100%;
   }
   .topnav img.expand {
     float: right;
     display: block;
+    font-size: 50%;
+    height: 100%;
+    line-height: 100%;
   }
   .topnav.mini {
     position: relative;
-    transition: .2s;
+    transition: .5s;
   }
   .topnav.mini img.expand {
     position: absolute;
