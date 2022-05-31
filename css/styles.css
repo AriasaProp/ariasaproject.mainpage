@@ -60,6 +60,10 @@ body
     margin: 0;
     padding: 14px;
   }
+  
+  .topnav a.search-container {
+    float: right
+  }
 }
 title
 {
