@@ -36,7 +36,7 @@ body
   margin-right: 16px;
   font-size: 17px;
 }
-.topnav .search-container {
+.topnav a.search-container {
   float: right
 }
 .topnav .search-container button {
@@ -52,19 +52,13 @@ body
   background: #ccc;
 }
 @media screen and (max-width: 600px) {
-  .topnav .search-container {
-    float: none;
-  }
-  .topnav a, .topnav input[type=text], .topnav .search-container button {
+  .topnav a {
     float: none;
     display: block;
     text-align: left;
     width: 100%;
     margin: 0;
     padding: 14px;
-  }
-  .topnav input[type=text] {
-    border: 1px solid #ccc;  
   }
 }
 title
