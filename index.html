@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0f">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0f">
     <link href="css/styles.css" rel="stylesheet"/>
-	<title>Ariasa Project</title>
-	<script>
-	function expand() {
-	  var x = document.getElementById("ntopnav");
-	  if (x.className === "topnav") {
-		x.className += " mini";
-	  } else {
-		x.className = "topnav";
-	  }
-	}
-	</script>
+    <title>Ariasa Project</title>
   </head>
   <body>
-	<div class="topnav" id="ntopnav">
-		<a class="active" href="#home">Main</a>
-		<a href="#tools" id="navList">Tools</a>
-		<a href="#extras" id="navList">Extras</a>
-		<div class="searchbar" id="navList">
-			<input type="search" placeholder="Search..." id="topnav-search"></input>
-			<img src="img/ic/eraser.png" alt="Clear" width="25px" height="25px" onclick="getElementById('topnav-search').value=''">
-			<img src="img/ic/search.png" alt="Search" width="25px" height="25px">
-		</div>
-		<img src="img/ic/nav-menu-active.svg" alt="Menu" width="40px" height="40px" class="expand" onclick="expand()">
-	</div>
+    <div class="topnav" id="ntopnav">
+      <a class="active" href="#home">Main</a>
+      <a href="#tools">Tools</a>
+      <a href="#extras">Extras</a>
+      <a href="javascript;void(0)">
+	<input type="search" placeholder="Search..." id="topnav-search"></input>
+	<img src="img/ic/eraser.png" alt="Clear" width="25px" height="25px" onclick="getElementById('topnav-search').value=''">
+	<img src="img/ic/search.png" alt="Search" width="25px" height="25px">
+      </a>
+      <img src="img/ic/nav-menu-active.svg" alt="Menu" width="40px" height="40px" class="expand" onclick="expand()">
+    </div>
     <h1>
-	  Ariasa Project
-	  <br>Main Page</br>
-	</h1>
+      Ariasa Project
+      <br>Main Page</br>
+    </h1>
 
     <p>Belum ada apapun yang dibuat!</p>
 	<hr/>
 	<p>
 	  Saya masih baru dalam web development
 	  <br>
-		Website ini masih dalam tahap pembuatan
+	    Website ini masih dalam tahap pembuatan
 	  </br>
 	</p>
 
+    <script>
+      function expand() {
+        var x = document.getElementById("ntopnav");
+	if (x.className === "topnav") {
+          x.className += " mini";
+	} else {
+	  x.className = "topnav";
+	}
+      }
+    </script>
   </body>
 </html>		
