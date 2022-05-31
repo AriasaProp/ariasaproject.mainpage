@@ -7,11 +7,11 @@
 	<title>Ariasa Project</title>
 	<script>
 	function expand() {
-	  var x = document.getElementById("navList");
-	  if (x.display === "none") {
-		x.display = "block";
+	  var x = document.getElementById("ntopnav");
+	  if (x.className === "topnav") {
+		x.className = " mini";
 	  } else {
-		x.display = "none";
+		x.className = "topnav";
 	  }
 	}
 	</script>
