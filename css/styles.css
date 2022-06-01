@@ -8,6 +8,10 @@ body {
 }
 /* top navigation bar style, universal */
 .topnav {
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  overflow: hidden;
   font-size: 30pt;
 }
 .topnav a {
