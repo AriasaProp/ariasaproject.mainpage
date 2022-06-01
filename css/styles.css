@@ -17,13 +17,13 @@ ul.topnav {
   font-size: 20px;
 }
 ul.topnav li {
-  display: inline-block;
+  display: block;
   float: left;
 }
 ul.topnav li a {
   cursor: pointer;
   color: #f2f2f2;
-  text-align: center center;
+  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 99%;
@@ -41,7 +41,7 @@ ul.topnav li a input[type=search] {
 ul.topnav li a img {
   background: white;
   border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
+  border-left: none;
   cursor: pointer;
 }
 ul.topnav li a img:active {
