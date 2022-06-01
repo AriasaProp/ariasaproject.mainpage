@@ -15,9 +15,11 @@ ul.topnav {
   font-size: 20px;
 }
 ul.topnav li {
-  display: inline;
-  cursor: pointer;
+  display: inline-block;
   float: left;
+}
+ul.topnav li a {
+  cursor: pointer;
   color: #f2f2f2;
   text-align: center center;
   padding: 14px 16px;
@@ -25,9 +27,6 @@ ul.topnav li {
   font-size: 99%;
   height: 100%;
   line-height: 100%;
-}
-ul.topnav li:hover {
-  border: 3px solid grey;
 }
 ul.topnav li.active {
   font-weight: bold;
