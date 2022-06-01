@@ -7,7 +7,7 @@ body {
   font-size: 29pt;
 }
 /* top navigation bar style, universal */
-.topnav ul {
+ul.topnav {
   display: block;
   list-style-type: none;
   margin: 0;
