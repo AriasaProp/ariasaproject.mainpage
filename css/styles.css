@@ -28,7 +28,7 @@ ul.topnav li a {
   height: 100%;
   line-height: 100%;
 }
-ul.topnav li.active {
+ul.topnav li a.active {
   font-weight: bold;
   background-color: #04AA6D;
   color: white;
