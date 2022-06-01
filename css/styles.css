@@ -16,9 +16,12 @@ ul.topnav {
   overflow: hidden;
 }
 ul.topnav li {
-  display: block;
+  padding: 14px 16px;
   float: left;
-  text-decoration: none;
+}
+ul.topnav li:last-child {
+  padding: 0;
+  float: right;
 }
 ul.topnav li a {
   display: block;
