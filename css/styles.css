@@ -20,6 +20,10 @@ ul.topnav li {
   float: left;
   text-decoration: none;
 }
+ul.topnav li a {
+  display: block;
+  text-decoration: none;
+}
 ul.topnav li.active {
   background-color: #171;
 }
