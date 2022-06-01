@@ -7,39 +7,14 @@ body {
   font-size: 29pt;
 }
 /* top navigation bar style, universal */
-ul.topnav {
-  display: block;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: #111;
-  overflow: hidden;
-<<<<<<< HEAD
-  font-size: 50px;
-=======
->>>>>>> branch 'main' of https://github.com/AriasaProp/ariasaproject.mainpage.git
+.topnav {
+  font-size: 30pt;
 }
-<<<<<<< HEAD
 .topnav a {
   cursor: pointer;
   float: left;
   color: #f2f2f2;
   text-align: center;
-=======
-ul.topnav li {
->>>>>>> branch 'main' of https://github.com/AriasaProp/ariasaproject.mainpage.git
-  padding: 14px 16px;
-  float: left;
-}
-ul.topnav li:last-child {
-  padding: 0;
-  float: right;
-}
-ul.topnav li a {
-  display: block;
-  text-decoration: none;
-<<<<<<< HEAD
-  font-size: 100%;
   height: 100%;
   line-height: 100%;
 }
@@ -56,7 +31,7 @@ a.searchnav input[type=search] {
 a.searchnav img {
   background: white;
   border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
+  border-left: none;
   cursor: pointer;
 }
 a.searchnav img:active {
@@ -98,11 +73,6 @@ a.searchnav img:active {
     background-color: #04AA6D;
     color: white;
   }
-=======
-}
-ul.topnav li.active {
-  background-color: #171;
->>>>>>> branch 'main' of https://github.com/AriasaProp/ariasaproject.mainpage.git
 }
 /* content */
 title {
