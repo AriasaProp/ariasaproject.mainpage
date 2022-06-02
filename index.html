@@ -11,10 +11,10 @@
       <a class="active" href="#home">Main</a>
       <a href="#tools">Tools</a>
       <a href="#extras">Extras</a>
-      <div class="searchnav">
-        <input type="text" placeholder="Search..." id="topnav-search"></input>
+      <form onsubmit="javascript:void(0);" class="searchnav">
+        <input type="search" placeholder="Search..." id="topnav-search"></input>
         <img src="img/ic/eraser.png" alt="Clear" width="40px" height="30px" onclick="getElementById('topnav-search').value = ''">
-        <img src="img/ic/search.png" alt="Search" width="40px" height="30px">
+        <img type="submit" src="img/ic/search.png" alt="Search" width="40px" height="30px">
       </div>
       <img src="img/ic/nav-menu-active.svg" alt="Menu" width="40px" height="40px" class="expand" onclick="expand()">
     </div>
