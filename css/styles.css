@@ -41,7 +41,7 @@ body {
   outline: none;
   resize: none;
 }
-.topnav .searchnav input[type=text] {
+.topnav .searchnav input[type=search] {
   border: 0;
   background: transparent;
   text-align: left;
