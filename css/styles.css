@@ -10,12 +10,9 @@ body {
 .topnav {
   margin: 0;
   padding: 0;
-  background-color: #111;
+  background: #111;
   overflow: hidden;
   font-size: 30pt;
-}
-.topnav * {
-  box-sizing: border-box;
 }
 .topnav a {
   text-decoration: none;
@@ -28,25 +25,28 @@ body {
 }
 .topnav a.active {
   font-weight: bold;
-  background-color: #04AA6D;
+  background: #04AA6D;
   color: white;
 }
 .topnav .searchnav {
   float: right;
+  padding: 14px 18px;
+  line-height: 100%;
+}
+.topnav .searchnav:child {
+  float: center;
   padding: 0;
   margin: 0;
+  display: block-inline;
+  outline: none;
+  resize: none;
 }
 .topnav .searchnav input[type=text] {
-  padding: 6px;
-  margin: 1px 1px;
   border: 0;
   background: transparent;
   text-align: left;
-  height: 100%;
 }
 .topnav .searchnav img {
-  padding: 6px;
-  margin: 1px 1px;
   background: white;
   border: 1px solid grey;
   border-left: none;
@@ -55,7 +55,7 @@ body {
 }
 .topnav .searchnav img:active {
   border: 0;
-  background: #3ba1d4;
+  background: grey;
 }
 .topnav img.expand {
   position: absolute;
@@ -67,11 +67,13 @@ body {
 @media screen and (max-width: 800px) {
   .topnav a:not(:first-child), .topnav .searchnav{
     display: none;
+    transition: 2.7s;
   }
   .topnav img.expand {
     display: block;
   }
   .topnav.mini a, .topnav.mini .searchnav {
+    transition: 2.7s;
     float: none;
     display: block;
   }
