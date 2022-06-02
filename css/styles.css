@@ -12,7 +12,7 @@ body {
   padding: 0;
   background: #111;
   overflow: hidden;
-  font-size: 30pt;
+  font-size: 27pt;
 }
 .topnav a {
   text-decoration: none;
@@ -67,13 +67,11 @@ body {
 @media screen and (max-width: 800px) {
   .topnav a:not(:first-child), .topnav .searchnav{
     display: none;
-    transition: 2.7s;
   }
   .topnav img.expand {
     display: block;
   }
   .topnav.mini a, .topnav.mini .searchnav {
-    transition: 2.7s;
     float: none;
     display: block;
   }
