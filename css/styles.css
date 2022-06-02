@@ -8,7 +8,7 @@ body {
 }
 /* top navigation bar style, universal */
 .topnav {
-  --nav-base: 20vh;
+  --nav-base: 15vh;
   --nav-pad: calc(10px + 0.5vh);
   --nav-s: calc(var(--nav-base) - 2*var(--nav-pad));
   margin: 0;
@@ -67,7 +67,7 @@ body {
 }
 @media screen and (max-width: 800px) {
   .topnav {
-    --nav-base: 15vh;
+    --nav-base: 12vh;
   }
   .topnav a:not(:first-child), .topnav form{
     display: none;
