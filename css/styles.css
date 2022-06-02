@@ -9,12 +9,13 @@ body {
 /* top navigation bar style, universal */
 .topnav {
   --nav-base: 20vh;
-  --nav-pad: 6px + 0.2vh;
+  --nav-pad: 10px + 0.5vh;
+  --nav-s: 19vh - 20px;
   margin: 0;
   padding: 0;
   background: #010101;
   overflow: hidden;
-  font-size: var(--nav-base) - 2 * var(--nav-pad);
+  font-size: var(--nav-s);
 }
 .topnav a {
   text-decoration: none;
@@ -22,7 +23,7 @@ body {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 2*var(--nav-pad);
+  padding: var(--nav-pad);
 }
 .topnav a:hover {
   color: black;
@@ -36,7 +37,7 @@ body {
 .topnav form {
   padding: var(--nav-pad);
   float: right;
-  height: 100% - 2*var(--nav-pad);
+  height: var(--nav-s);
 }
 .topnav form input[type=search] {
   padding: 0;
@@ -47,7 +48,7 @@ body {
   color: #f2f2f2;
   background: transparent;
   height: 100%;
-  width: 100% - 12vh;
+  width: 100% - var(--nav-s);
   text-align: left;
   font-size: 100%;
 }
@@ -58,8 +59,8 @@ body {
   resize: none;
 }
 .topnav form button img {
-  width: var(--nav-base) * 0.5;
-  height: var(--nav-base) * 0.5;
+  width: var(--nav-s);
+  height: var(--nav-s);
 }
 .topnav img.expand {
   display: none;
@@ -75,7 +76,7 @@ body {
     position: absolute;
     padding: var(--nav-pad);
     display: block;
-    width: var(--nav-base) - 2*var(--nav-pad);
+    width: var(--nav-s);
     right: 0;
     top: 0;
   }
