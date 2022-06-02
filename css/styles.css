@@ -9,8 +9,8 @@ body {
 /* top navigation bar style, universal */
 .topnav {
   --nav-base: 20vh;
-  --nav-pad: 10px + 0.5vh;
-  --nav-s: 19vh - 20px;
+  --nav-pad: calc(10px + 0.5vh);
+  --nav-s: calc(var(--nav-base) - 2*var(--nav-pad));
   margin: 0;
   padding: 0;
   background: #010101;
@@ -48,7 +48,7 @@ body {
   color: #f2f2f2;
   background: transparent;
   height: 100%;
-  width: 100% - var(--nav-s);
+  width: calc(100% - 2*var(--nav-s));
   text-align: left;
   font-size: 100%;
 }
