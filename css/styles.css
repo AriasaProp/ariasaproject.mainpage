@@ -9,7 +9,7 @@ body {
 /* top navigation bar style, universal */
 .topnav {
   --nav-base: 60px;
-  --nav-pad: 9px;
+  --nav-pad: 6px;
   --nav-s: calc(var(--nav-base) - 2*var(--nav-pad));
   margin: 0;
   padding: 0;
@@ -48,9 +48,9 @@ body {
   color: #f2f2f2;
   background: transparent;
   height: 100%;
-  width: calc(100% - 2*var(--nav-s));
+  width: calc(100% - 4*var(--nav-s));
   text-align: left;
-  font-size: 100%;
+  font-size: calc(var(--nav-s)-var(--nav-pad));
 }
 .topnav form button {
   padding: 0;
