@@ -13,7 +13,7 @@ body {
   padding: 0;
   background: #010101;
   overflow: hidden;
-  font-size: var(--nav-base) - 14px;
+  font-size: var(--nav-base) - 28px;
 }
 .topnav a {
   text-decoration: none;
@@ -35,7 +35,7 @@ body {
 .topnav form {
   margin: 1px;
   float: right;
-  height: 100%;
+  height: 100% - 2px;
 }
 .topnav form input[type=search] {
   padding: 18px;
@@ -46,9 +46,9 @@ body {
   color: #f2f2f2;
   background: transparent;
   height: 100%;
-  width: 80%;
+  width: 100% - 12vh;
   text-align: left;
-  font-size: 100% - 18px;
+  font-size: 100% - 36px;
 }
 .topnav form button {
   padding: 0;
@@ -61,7 +61,7 @@ body {
 }
 @media screen and (max-width: 800px) {
   .topnav {
-    --nav-h: 15vh;
+    --nav-base: 15vh;
   }
   .topnav a:not(:first-child), .topnav form{
     display: none;
@@ -70,6 +70,7 @@ body {
     position: absolute;
     padding: 14px;
     display: block;
+    width: var(--nav-base) - 28px;
     right: 0;
     top: 0;
   }
