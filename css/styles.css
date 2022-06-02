@@ -8,8 +8,8 @@ body {
 }
 /* top navigation bar style, universal */
 .topnav {
-  --nav-base: 50px;
-  --nav-pad: 12px;
+  --nav-base: 60px;
+  --nav-pad: 9px;
   --nav-s: calc(var(--nav-base) - 2*var(--nav-pad));
   margin: 0;
   padding: 0;
@@ -35,7 +35,7 @@ body {
   color: white;
 }
 .topnav form {
-  padding: var(--nav-pad);
+  padding: var(--nav-pad) auto;
   float: right;
   height: var(--nav-s);
 }
@@ -67,14 +67,14 @@ body {
 }
 @media screen and (max-width: 800px) {
   .topnav {
-    --nav-base: 35px;
+    --nav-base: 45px;
   }
   .topnav a:not(:first-child), .topnav form{
     display: none;
   }
   .topnav img.expand {
     position: absolute;
-    padding: var(--nav-pad);
+    padding: var(--nav-pad) auto;
     display: block;
     width: var(--nav-s);
     right: 0;
