@@ -8,7 +8,7 @@ body {
 }
 /* top navigation bar style, universal */
 .topnav {
-  --nav-base: 60px;
+  --nav-base: 55px;
   --nav-pad: 6px;
   --nav-s: calc(var(--nav-base) - 2*var(--nav-pad));
   margin: 0;
@@ -35,32 +35,42 @@ body {
   color: white;
 }
 .topnav form {
-  padding: var(--nav-pad) auto;
+  padding: 0;
+  margin: 0;
   float: right;
   height: var(--nav-s);
 }
 .topnav form input[type=search] {
-  padding: 0;
-  margin: 0;
-  outline: none;
-  resize: none;
+  margin: var(--nav-pad);
+  outline: 0;
+  resize: 0;
   border: 0;
-  color: #f2f2f2;
   background: transparent;
+  color: #f2f2f2;
   height: 100%;
-  width: calc(100% - 4*var(--nav-s));
+  width: calc(100% - 3*var(--nav-s));
   text-align: left;
-  font-size: calc(var(--nav-s)-var(--nav-pad));
+  font-size: 90%;
 }
 .topnav form button {
-  padding: 0;
+  border: 0;
+  font-style: normal;
+  padding: 2px;
   margin: 0;
-  border: none;
+  background: #eee;
   resize: none;
-}
-.topnav form button img {
+  cursor: pointer;
   width: var(--nav-s);
   height: var(--nav-s);
+}
+.topnav form button:active {
+  background: #222;
+}
+.topnav form button img {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 .topnav img.expand {
   display: none;
@@ -73,10 +83,12 @@ body {
     display: none;
   }
   .topnav img.expand {
+	color: white;
     position: absolute;
-    padding: var(--nav-pad) auto;
+    padding: var(--nav-pad);
     display: block;
     width: var(--nav-s);
+    height: var(--nav-s);
     right: 0;
     top: 0;
   }
