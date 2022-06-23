@@ -1,8 +1,9 @@
 :root {
-  
+  background: #733bb3aa
 }
 html {
-  background: #733bb3aa
+  margin: 0;
+  padding: 0;
 }
 body {
   margin: 0;
@@ -38,17 +39,17 @@ body {
   padding: 0;
   margin: 0;
   float: right;
-  height: var(--nav-s);
+  height: 40pt;
 }
 .topnav form input[type=search] {
-  margin: var(--nav-pad);
+  margin: 6px;
   outline: 0;
   resize: 0;
   border: 0;
   background: transparent;
   color: #f2f2f2;
   height: 100%;
-  width: calc(100% - 3*var(--nav-s));
+  width: calc(100%-3px);
   text-align: left;
   font-size: 90%;
 }
@@ -60,8 +61,8 @@ body {
   background: #eee;
   resize: none;
   cursor: pointer;
-  width: var(--nav-s);
-  height: var(--nav-s);
+  width: 50px;
+  height: 50px;
 }
 .topnav form button:active {
   background: #222;
@@ -77,18 +78,18 @@ body {
 }
 @media screen and (max-width: 800px) {
   .topnav {
-    --nav-base: 45px;
+    font-size: 25pt;
   }
-  .topnav a:not(:first-child), .topnav form{
+  .topnav a:not(:first-child), .topnav form {
     display: none;
   }
   .topnav img.expand {
-	color: white;
+    color: white;
     position: absolute;
-    padding: var(--nav-pad);
+    padding: 6px;
     display: block;
-    width: var(--nav-s);
-    height: var(--nav-s);
+    width: 40px;
+    height: 40px;
     right: 0;
     top: 0;
   }
@@ -103,6 +104,6 @@ title {
   font-weight: bold;
 }
 h1 {
-  font-family:georgia;
-  text-align:center
+  font-family: georgia;
+  text-align: center
 }
