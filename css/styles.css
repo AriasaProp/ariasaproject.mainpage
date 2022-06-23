@@ -8,16 +8,18 @@ html {
 body {
   margin: 0;
   font-family: sans-serif;
-  font-size: 20pt;
+  font-size: 29pt;
 }
 /* top navigation bar style, universal */
 .topnav {
+  --nav-base: 55px;
+  --nav-pad: 6px;
+  --nav-s: calc(var(--nav-base) - 2*var(--nav-pad));
   margin: 0;
   padding: 0;
   background: #010101;
-  /*overflow: hidden;*/
-  font-size: 20pt;
-  height: 100px;
+  overflow: hidden;
+  font-size: var(--nav-s);
 }
 .topnav a {
   text-decoration: none;
@@ -25,13 +27,13 @@ body {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 6px;
+  padding: var(--nav-pad);
 }
 .topnav a:hover {
   color: black;
   background: #f2f2f2;
 }
-.topnav .active {
+.topnav a.active {
   font-weight: bold;
   background: #04AA6D;
   color: white;
@@ -40,17 +42,17 @@ body {
   padding: 0;
   margin: 0;
   float: right;
-  height: 40pt;
+  height: var(--nav-s);
 }
 .topnav form input[type=search] {
-  margin: 6px;
+  margin: var(--nav-pad);
   outline: 0;
   resize: 0;
   border: 0;
   background: transparent;
   color: #f2f2f2;
   height: 100%;
-  width: calc(100%-3px);
+  width: calc(100% - 3*var(--nav-s));
   text-align: left;
   font-size: 90%;
 }
@@ -62,8 +64,8 @@ body {
   background: #eee;
   resize: none;
   cursor: pointer;
-  width: 30px;
-  height: 30px;
+  width: var(--nav-s);
+  height: var(--nav-s);
 }
 .topnav form button:active {
   background: #222;
@@ -79,28 +81,18 @@ body {
 }
 @media screen and (max-width: 800px) {
   .topnav {
-    font-size: 25pt;
+    --nav-base: 45px;
   }
-  .topnav a:not(:first-child), .topnav form {
+  .topnav a:not(:first-child), .topnav form{
     display: none;
   }
-
-  .topnav form button {
-    border: 0;
-    font-style: normal;
-    padding: 1px;
-    margin: 0;
-    background: #eee;
-    resize: none;
-    cursor: pointer;
-    width: 10px;
-    height: 10px;
-  }
   .topnav img.expand {
-    color: white;
+	color: white;
     position: absolute;
-    padding: 3px;
+    padding: var(--nav-pad);
     display: block;
+    width: var(--nav-s);
+    height: var(--nav-s);
     right: 0;
     top: 0;
   }
@@ -109,13 +101,13 @@ body {
     display: block;
     width: 100%;
   }
-
 }
 /* content */
 title {
+  font-size: 25pt;
   font-weight: bold;
 }
 h1 {
-  font-family: georgia;
-  text-align: center
+  font-family:georgia;
+  text-align:center
 }
