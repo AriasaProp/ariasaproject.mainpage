@@ -1,7 +1,5 @@
 :root {
-  --nav-base: 55px;
-  --nav-pad: 6px;
-  --nav-s: calc(var(--nav-base) - 2*var(--nav-pad));
+  
 }
 html {
   background: #733bb3aa
@@ -17,7 +15,7 @@ body {
   padding: 0;
   background: #010101;
   overflow: hidden;
-  font-size: var(--nav-s);
+  font-size: 40pt;
 }
 .topnav a {
   text-decoration: none;
@@ -25,13 +23,13 @@ body {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: var(--nav-pad);
+  padding: 6px;
 }
 .topnav a:hover {
   color: black;
   background: #f2f2f2;
 }
-.topnav a.active {
+.topnav .active {
   font-weight: bold;
   background: #04AA6D;
   color: white;
