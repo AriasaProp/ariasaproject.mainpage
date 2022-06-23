@@ -15,7 +15,7 @@ body {
   margin: 0;
   padding: 0;
   background: #010101;
-  overflow: hidden;
+  /*overflow: hidden;*/
   font-size: 20pt;
   height: 100px;
 }
