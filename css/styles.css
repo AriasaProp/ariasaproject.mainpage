@@ -61,8 +61,8 @@ body {
   background: #eee;
   resize: none;
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
 .topnav form button:active {
   background: #222;
@@ -83,6 +83,18 @@ body {
   .topnav a:not(:first-child), .topnav form {
     display: none;
   }
+
+  .topnav form button {
+    border: 0;
+    font-style: normal;
+    padding: 1px;
+    margin: 0;
+    background: #eee;
+    resize: none;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+  }
   .topnav img.expand {
     color: white;
     position: absolute;
@@ -98,6 +110,7 @@ body {
     display: block;
     width: 100%;
   }
+
 }
 /* content */
 title {
