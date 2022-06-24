@@ -16,28 +16,38 @@
   </script>
 </head>
 <body>
-  <div class="topnav" id="ntopnav">
-    <a class="active" href="#home">Main</a>
-    <a href="#tools">Tools</a>
-    <a href="#extras">Extras</a>
-    <img src="img/ic/nav-menu.svg" class="expand" onclick="expand()">
-    <form onsubmit="javascript:void(0);">
-      <input type="search" placeholder="Search..." name="search" id="topnav-search" />
-      <button onclick="document.getElementById('topnav-search').value='';"><img src="img/ic/erase.svg"></button>
-      <button type="submit"><img src="img/ic/search.svg"></button>
-    </form>
-  </div>
-  <h1>
-    Ariasa Project<br>
-    Main Page
-  </h1>
-  <p>
-    Belum ada apapun yang dibuat!
-  </p>
-  <hr />
-  <p>
-    Saya masih baru dalam web development<br>
-    Website ini masih dalam tahap pembuatan
-  </p>
+  <background-content>
+    <div class="cube">
+      <span style="--i: 0;"></span>
+      <span style="--i: 1;"></span>
+      <span style="--i: 2;"></span>
+      <span style="--i: 3;"></span>
+      <span class="top"></span>
+    </div>
+  </background-content>
+  <content>
+    <div class="topnav" id="ntopnav">
+      <a class="active">Main</a>
+      <a>Tools</a>
+      <a>Extras</a>
+      <img src="img/ic/nav-menu.svg" class="expand" onclick="expand()">
+      <form>
+        <input type="search" placeholder="Search..." name="search" id="topnav-search" />
+        <button><img src="img/ic/search.svg"></button>
+      </form>
+    </div>
+    <h1>
+      Ariasa Project<br>
+      Main Page
+    </h1>
+    <p>
+      Belum ada apapun yang dibuat!
+    </p>
+    <hr />
+    <p>
+      Saya masih baru dalam web development<br>
+      Website ini masih dalam tahap pembuatan
+    </p>
+  </content>
 </body>
 </html>
