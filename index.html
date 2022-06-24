@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0f" />
   <link href="css/styles.css" rel="stylesheet" />
@@ -18,11 +18,12 @@
 <body>
   <background-content>
     <div class="cube">
-      <span style="--i: 0;"></span>
-      <span style="--i: 1;"></span>
-      <span style="--i: 2;"></span>
-      <span style="--i: 3;"></span>
-      <span class="top"></span>
+      <span></span>
+      <span style="transform: translateZ(100px);"></span>
+      <span style="transform: rotateY(90deg) translateZ(100px);"></span>
+      <span style="transform: translateZ(-100px);"></span>
+      <span style="transform: rotateY(270deg) translateZ(100px);"></span>
+      <span></span>
     </div>
   </background-content>
   <content>
@@ -30,7 +31,7 @@
       <a class="active">Main</a>
       <a>Tools</a>
       <a>Extras</a>
-      <img src="img/ic/nav-menu.svg" class="expand" onclick="expand()">
+	  <img src="img/ic/nav-menu.svg" class="expand" onclick="expand()">
       <form>
         <input type="search" placeholder="Search..." name="search" id="topnav-search" />
         <button><img src="img/ic/search.svg"></button>
@@ -41,12 +42,12 @@
       Main Page
     </h1>
     <p>
-      Belum ada apapun yang dibuat!
+      Nothing inside here!
     </p>
     <hr />
     <p>
-      Saya masih baru dalam web development<br>
-      Website ini masih dalam tahap pembuatan
+      This page under construction!<br>
+      this page is null
     </p>
   </content>
 </body>

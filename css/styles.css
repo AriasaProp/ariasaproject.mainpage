@@ -1,38 +1,31 @@
-:root {
-  --nav-pad: 8px;
-  --nav-s: calc(55px - 2*var(--nav-pad));
-}
 html {
   margin: 0;
   padding: 0;
-  background: #733bb3aa
+  background: #171717
 }
 body {
+  color: white;
   margin: 0;
   font-family: sans-serif;
   font-size: 14pt;
 }
 /* background animation */
 background-content {
-  top: 0;
-  left: 0;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: #fafafafa;*/
   width: 100%;
   height: 100%;
 }
 background-content .cube {
   position: relative;
-  top: calc(50%-150px);
-  left: calc(50%-150px);
-  width: 300px;
-  height: 300px;
+  margin: auto;
+  width: 200px;
+  height: 200px;
   transform-style: preserve-3d;
   transform: rotateX(-30deg);
-  animation: animate 4s linear infinite;
+  animation: animate 12s linear infinite;
 }
 @keyframes animate {
   0% {
@@ -44,31 +37,24 @@ background-content .cube {
 }
 background-content .cube span {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 300px;
-  height: 300px;
-  transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
-  background: linear-gradient(#000000, #fba);
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#000000, #24d3ff);
 }
-background-content .cube span.top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300px;
-  height: 300px;
-  transform: rotateX(90deg) translateZ(150px);
+background-content .cube span:first-child {
+  transform: rotateX(90deg) translateZ(100px);
   background: #000000;
 }
-background-content .cube span.top:before {;
-  transform: translateZ(-500px);
-  background: #ffbbaa;
-  filter: blur(80px);
-  box-shadow: 0 0 100px #ffbbaa11,
-  0 0 200px #ffbbaa55,
-  0 0 300px #ffbbaa99,
-  0 0 400px #ffbbaacc,
-  0 0 500px #ffbbaaff;
+background-content .cube span:last-child {
+  transform: rotateX(90deg) translateZ(-110px);
+  background: #24d3ff;
+  filter: blur(20px);
+  box-shadow: 0 0 120px rgba(#24d3ff, 0.2),
+  0 0 150px rgba(#24d3ff, 0.4),
+  0 0 180px rgba(#24d3ff, 0.6),
+  0 0 200px rgba(#24d3ff, 0.8),
+  0 0 210px rgba(#24d3ff, 1);
 }
 /* content */
 content {
@@ -82,7 +68,10 @@ content {
   padding: 0;
   background: #010101;
   overflow: hidden;
-  font-size: var(--nav-s);
+  font-size: 24pt;
+}
+.topnav:child {
+	display: inline-block;
 }
 .topnav a {
   text-decoration: none;
@@ -90,7 +79,7 @@ content {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: var(--nav-pad);
+  padding: 6px;
 }
 .topnav a:hover {
   color: black;
@@ -102,64 +91,64 @@ content {
   color: white;
 }
 .topnav form {
-  padding: 0;
-  margin: 0;
-  align-content: center;
+  min-width: 300px;
+  max-width: 350px;
+  margin-left: 0;
   float: right;
-  height: var(--nav-s);
+  width: auto;
 }
-.topnav form input[type=search] {
-  margin: var(--nav-pad);
+.topnav form * {
+  border: 0;
   outline: 0;
   resize: 0;
-  border: 0;
-  background: transparent;
-  color: #f2f2f2;
-  height: 100%;
-  width: calc(100% - 2*var(--nav-s));
-  text-align: left;
-  font-size: 80%;
+  padding: 0;
+  margin: auto;
+  font-style: normal;
+  resize: none;
   display: inline-block;
 }
+.topnav form input[type=search] {
+  background: transparent;
+  color: #f2f2f2;
+  text-align: left;
+  font-size: 24px;
+}
 .topnav form button {
-  border: 0;
-  font-style: normal;
-  padding: 2px;
-  margin: 0;
   background: #eee;
-  resize: none;
   cursor: pointer;
-  width: var(--nav-s);
-  height: var(--nav-s);
-  display: inline-block;
+  width: 24pt;
+  height: 24pt;
 }
 .topnav form button:active {
   background: #222;
 }
-.topnav form button img {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-}
+
 .topnav img.expand {
   display: none;
 }
-@media screen and (max-width: 800px) {
-:root {
-    --nav-pad: 8px;
-    --nav-s: calc(42px - 2*var(--nav-pad));
-  }
+@media screen and (max-width: 700px) {
   .topnav a:not(:first-child), .topnav form {
     display: none;
+  }
+  .topnav a {
+    padding: 2px;
+  }
+  .topnav form input[type=search] {
+    text-align: left;
+    font-size: 20pt;
+  }
+  .topnav form button {
+    padding: 1px;
+    width: 20pt;
+    height: 20pt;
   }
   .topnav img.expand {
     color: white;
     position: absolute;
-    padding: var(--nav-pad);
+    padding: 5px;
     display: block;
-    width: var(--nav-s);
-    height: var(--nav-s);
+    width: 30px;
+    height: 30px;
     right: 0;
     top: 0;
   }
