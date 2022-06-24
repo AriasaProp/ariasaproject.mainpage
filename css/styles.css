@@ -1,28 +1,31 @@
-html {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+html {
   background: #171717
 }
 body {
   color: white;
-  margin: 0;
   font-family: sans-serif;
   font-size: 14pt;
 }
 /* background animation */
 background-content {
+  min-width: 300px;
+  min-height: 300px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
 }
 background-content .cube {
-  position: relative;
+  width: 300px;
+  height: 300px;
   margin: auto;
-  width: 200px;
-  height: 200px;
   transform-style: preserve-3d;
   transform: rotateX(-30deg);
   animation: animate 12s linear infinite;
@@ -37,17 +40,16 @@ background-content .cube {
 }
 background-content .cube span {
   position: absolute;
-  margin: auto;
   width: 100%;
   height: 100%;
   background: linear-gradient(#000000, #24d3ff);
 }
 background-content .cube span:first-child {
-  transform: rotateX(90deg) translateZ(100px);
+  transform: rotateX(90deg) translateZ(150px);
   background: #000000;
 }
 background-content .cube span:last-child {
-  transform: rotateX(90deg) translateZ(-110px);
+  transform: rotateX(270deg) translateZ(170px);
   background: #24d3ff;
   filter: blur(20px);
   box-shadow: 0 0 120px rgba(#24d3ff, 0.2),
@@ -64,14 +66,12 @@ content {
 }
 /* top navigation bar style, universal */
 .topnav {
-  margin: 0;
-  padding: 0;
   background: #010101;
   overflow: hidden;
   font-size: 24pt;
 }
-.topnav:child {
-	display: inline-block;
+.topnav * {
+  display: inline-block;
 }
 .topnav a {
   text-decoration: none;
@@ -101,7 +101,6 @@ content {
   border: 0;
   outline: 0;
   resize: 0;
-  padding: 0;
   margin: auto;
   font-style: normal;
   resize: none;
@@ -112,12 +111,14 @@ content {
   color: #f2f2f2;
   text-align: left;
   font-size: 24px;
+  display: inline-block;
 }
 .topnav form button {
   background: #eee;
   cursor: pointer;
   width: 24pt;
   height: 24pt;
+  display: inline-block;
 }
 .topnav form button:active {
   background: #222;
@@ -147,8 +148,8 @@ content {
     position: absolute;
     padding: 5px;
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     right: 0;
     top: 0;
   }
