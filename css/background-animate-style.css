@@ -20,7 +20,7 @@ background-content .cube {
   margin: auto;
   transform-style: preserve-3d;
   transform: rotateX(-30deg);
-  animation: cube-rotate 8s ease-out infinite;
+  animation: cube-rotate 8s linear infinite;
 }
 @keyframes cube-rotate {
   0% {

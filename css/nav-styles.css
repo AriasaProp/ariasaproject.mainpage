@@ -39,32 +39,49 @@ i.icon-search {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: height 10s;
 }
-.topnav a {
+.topnav a.logo {
+  text-decoration: none;
+  cursor: pointer;
+  float: left;
+  text-align: center;
+  padding: 6px;
+  width: fit-content;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: bold;
+  color: white;
+}
+.topnav ul {
+  cursor: pointer;
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 18pt;
+}
+.topnav ul li {
+  padding: 0;
+  margin: auto;
+  display: inline-block;
+}
+.topnav ul li a {
   text-decoration: none;
   cursor: pointer;
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 6px;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-.topnav a:hover {
+.topnav ul li a:hover {
   color: black;
   background: #f2f2f2;
 }
-.topnav a.active {
-  font-weight: bold;
-  background: #04AA6D;
-  color: white;
-}
 .topnav form {
-  min-width: 300px;
-  max-width: 350px;
-  margin-right: 0;
   float: right;
-  width: auto;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -72,14 +89,14 @@ i.icon-search {
 .topnav form input[type=search] {
   border: 0;
   outline: 0;
-  resize: 0;
   margin: auto;
   font-style: normal;
   display: inline-block;
   background: transparent;
   color: #f2f2f2;
   text-align: left;
-  font-size: 24px;
+  font-size: 20px;
+  width: 240px;
 }
 .topnav form button {
   border: 0;
@@ -96,16 +113,22 @@ i.icon-search {
 .topnav form button:active {
   background: #222;
 }
-
-.topnav .expand, .topnav .expand input {
+.topnav input, .topnav label {
   display: none;
 }
 @media screen and (max-width: 700px) {
-  .topnav a:not(:first-child), .topnav form {
-    display: none;
-  }
   .topnav a {
-    padding: 2px;
+    padding: 2px 15px;
+  }
+  .topnav ul {
+    float: none;
+	display: none;
+    width: 100%;
+  transition: all 1s;
+  }
+  .topnav ul li {
+    width: 100%;
+	margin: auto;
   }
   .topnav form input[type=search] {
     text-align: left;
@@ -116,33 +139,32 @@ i.icon-search {
     width: 20pt;
     height: 20pt;
   }
-  
-  .topnav .expand {
-	color: #ffffff;
+  .topnav label {
+	top: 0;
+	right: 0;
     position: absolute;
     display: flex;
+	cursor: pointer;
 	align-items: center;
 	justify-content: center;
-    right: 0;
-    top: 0;
-    width: 40px;
+	width: 40px;
     height: 40px;
   }
-  .topnav .expand label {
-	color: #ffffff;
-    width: 40px;
-    height: 40px;
-  }
-  .topnav .expand label span {
-	color: #ffffff;
+  .topnav label span {
+	top: 12px;
     display: block;
-    width: 38px;
-    height: 5px;
 	position: relative;
+	border: 14px solid transparent;
+	border-top: 14px solid white;
+	transition: border .2s;
   }
-  .topnav.mini a, .topnav.mini form {
-    float: none;
-    display: block;
-    width: 100%;
+  .topnav #nav-expand:checked ~ label span{
+	top: -12px;
+	border: 14px solid transparent;
+	border-bottom: 14px solid white;
+  }
+  .topnav #nav-expand:checked ~ ul{
+    display: flex;
+    flex-direction: column;
   }
 }
