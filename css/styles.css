@@ -50,7 +50,7 @@ background-content .cube span:first-child {
 }
 background-content .cube span:last-child {
   transform: rotateX(270deg) translateZ(170px);
-  background: #24d3ff;
+  background: #ffffff;
   filter: blur(20px);
   box-shadow: 0 0 120px #24d3ff33,
   0 0 150px #24d3ff66,
