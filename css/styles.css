@@ -111,7 +111,7 @@ content {
   color: black;
   background: #f2f2f2;
 }
-.topnav a.active {
+.topnav .active {
   font-weight: bold;
   background: #04AA6D;
   color: white;
@@ -127,27 +127,29 @@ content {
   padding: 0;
   box-sizing: border-box;
 }
-.topnav form * {
+.topnav form input[type=search] {
   border: 0;
   outline: 0;
   resize: 0;
   margin: auto;
   font-style: normal;
   display: inline-block;
-}
-.topnav form input[type=search] {
   background: transparent;
   color: #f2f2f2;
   text-align: left;
   font-size: 24px;
-  display: inline-block;
 }
 .topnav form button {
+  border: 0;
+  outline: 0;
+  resize: 0;
+  margin: auto;
+  font-style: normal;
+  display: inline-block;
   background: #eee;
   cursor: pointer;
   width: 24pt;
   height: 24pt;
-  display: inline-block;
 }
 .topnav form button:active {
   background: #222;
