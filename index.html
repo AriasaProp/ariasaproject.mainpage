@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0f" />
+  <link href="css/background-animate-style.css" rel="stylesheet" />
+  <link href="css/nav-styles.css" rel="stylesheet" />
   <link href="css/styles.css" rel="stylesheet" />
   <title>Ariasa Project</title>
   <script src="js/topnav_function.js"></script>
@@ -22,11 +25,20 @@
       <a class="active">Main</a>
       <a>Tools</a>
       <a>Extras</a>
+	  <!--
 	    <img src="img/ic/nav-menu.svg" class="expand" onclick="expand()"/>
-      <form>
+      -->
+	  <div class="expand">
+		  <input type="checkbox" id="nav-expand"></input>
+		  <label for="nav-expand">
+			<span></span>
+		  </label>
+	  </div>
+	  <form>
         <input type="search" placeholder="Search..." name="search" id="topnav-search" />
         <button><img src="img/ic/search.svg"></button>
       </form>
+	  
     </div>
     <h1>
       Ariasa Project<br>

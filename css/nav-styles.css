@@ -30,3 +30,119 @@ i.icon-erase {
 i.icon-search {
   content: "\e902";
 }
+
+/* top navigation bar style, universal */
+.topnav {
+  background: #010101;
+  overflow: hidden;
+  font-size: 24pt;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.topnav a {
+  text-decoration: none;
+  cursor: pointer;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 6px;
+  margin: 0;
+  box-sizing: border-box;
+}
+.topnav a:hover {
+  color: black;
+  background: #f2f2f2;
+}
+.topnav a.active {
+  font-weight: bold;
+  background: #04AA6D;
+  color: white;
+}
+.topnav form {
+  min-width: 300px;
+  max-width: 350px;
+  margin-right: 0;
+  float: right;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.topnav form input[type=search] {
+  border: 0;
+  outline: 0;
+  resize: 0;
+  margin: auto;
+  font-style: normal;
+  display: inline-block;
+  background: transparent;
+  color: #f2f2f2;
+  text-align: left;
+  font-size: 24px;
+}
+.topnav form button {
+  border: 0;
+  outline: 0;
+  resize: 0;
+  margin: auto;
+  font-style: normal;
+  display: inline-block;
+  background: #eee;
+  cursor: pointer;
+  width: 24pt;
+  height: 24pt;
+}
+.topnav form button:active {
+  background: #222;
+}
+
+.topnav .expand, .topnav .expand input {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  .topnav a:not(:first-child), .topnav form {
+    display: none;
+  }
+  .topnav a {
+    padding: 2px;
+  }
+  .topnav form input[type=search] {
+    text-align: left;
+    font-size: 20pt;
+  }
+  .topnav form button {
+    padding: 1px;
+    width: 20pt;
+    height: 20pt;
+  }
+  
+  .topnav .expand {
+	color: #ffffff;
+    position: absolute;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+  }
+  .topnav .expand label {
+	color: #ffffff;
+    width: 40px;
+    height: 40px;
+  }
+  .topnav .expand label span {
+	color: #ffffff;
+    display: block;
+    width: 38px;
+    height: 5px;
+	position: relative;
+  }
+  .topnav.mini a, .topnav.mini form {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+}
