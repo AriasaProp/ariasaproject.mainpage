@@ -1,170 +1,165 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('nav-fonts/icomoon.eot?878zuc');
-  src:  url('nav-fonts/icomoon.eot?878zuc#iefix') format('embedded-opentype'),
-    url('nav-fonts/icomoon.ttf?878zuc') format('truetype'),
-    url('nav-fonts/icomoon.woff?878zuc') format('woff'),
-    url('nav-fonts/icomoon.svg?878zuc#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+	font-family: 'icomoon';
+	src: url('nav-fonts/icomoon.eot?878zuc');
+	src: url('nav-fonts/icomoon.eot?878zuc#iefix') format('embedded-opentype'),
+	url('nav-fonts/icomoon.ttf?878zuc') format('truetype'),
+	url('nav-fonts/icomoon.woff?878zuc') format('woff'),
+	url('nav-fonts/icomoon.svg?878zuc#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
 }
 [class^="icon-"], [class*="icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
-i.icon-nav-menu {
-  content: "\e900";
+.icon-nav-menu {
+	content: "\e900";
 }
-i.icon-erase {
-  content: "\e901";
+.icon-erase {
+	content: "\e901";
 }
-i.icon-search {
-  content: "\e902";
+.icon-search {
+	content: "\e902";
+	color: black;
+	background: blue;
 }
 
 /* top navigation bar style, universal */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 .topnav {
-  background: #010101;
-  overflow: hidden;
-  font-size: 24pt;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition: height 10s;
-}
-.topnav a.logo {
-  text-decoration: none;
-  cursor: pointer;
-  float: left;
-  text-align: center;
-  padding: 6px;
-  width: fit-content;
-  margin: 0;
-  box-sizing: border-box;
-  font-weight: bold;
-  color: white;
-}
-.topnav ul {
-  cursor: pointer;
-  float: right;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  font-size: 18pt;
-}
-.topnav ul li {
-  padding: 0;
-  margin: auto;
-  display: inline-block;
-}
-.topnav ul li a {
-  text-decoration: none;
-  cursor: pointer;
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.topnav ul li a:hover {
-  color: black;
-  background: #f2f2f2;
-}
-.topnav form {
-  float: right;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.topnav form input[type=search] {
-  border: 0;
-  outline: 0;
-  margin: auto;
-  font-style: normal;
-  display: inline-block;
-  background: transparent;
-  color: #f2f2f2;
-  text-align: left;
-  font-size: 20px;
-  width: 240px;
-}
-.topnav form button {
-  border: 0;
-  outline: 0;
-  resize: 0;
-  margin: auto;
-  font-style: normal;
-  display: inline-block;
-  background: #eee;
-  cursor: pointer;
-  width: 24pt;
-  height: 24pt;
-}
-.topnav form button:active {
-  background: #222;
-}
-.topnav input, .topnav label {
-  display: none;
-}
-@media screen and (max-width: 700px) {
-  .topnav a {
-    padding: 2px 15px;
-  }
-  .topnav ul {
-    float: none;
-	display: none;
-    width: 100%;
-  transition: all 1s;
-  }
-  .topnav ul li {
-    width: 100%;
-	margin: auto;
-  }
-  .topnav form input[type=search] {
-    text-align: left;
-    font-size: 20pt;
-  }
-  .topnav form button {
-    padding: 1px;
-    width: 20pt;
-    height: 20pt;
-  }
-  .topnav label {
-	top: 0;
-	right: 0;
-    position: absolute;
-    display: flex;
-	cursor: pointer;
+	background: red /*#010101*/;
+	overflow: hidden;
+	display: inline-block;
+	width: 100%;
+	font-size: 20pt;
 	align-items: center;
 	justify-content: center;
-	width: 40px;
-    height: 40px;
-  }
-  .topnav label span {
-	top: 12px;
-    display: block;
-	position: relative;
-	border: 14px solid transparent;
-	border-top: 14px solid white;
-	transition: border .2s;
-  }
-  .topnav #nav-expand:checked ~ label span{
-	top: -12px;
-	border: 14px solid transparent;
-	border-bottom: 14px solid white;
-  }
-  .topnav #nav-expand:checked ~ ul{
-    display: flex;
-    flex-direction: column;
-  }
+	transition: height 10s;
+}
+.topnav .logo {
+	text-decoration: none;
+	cursor: pointer;
+	float: left;
+	text-align: center;
+	padding: 6px;
+	width: fit-content;
+	font-weight: bold;
+	color: white;
+}
+.topnav ul {
+	display: inline-block;
+	list-style: none;
+	font-size: 16pt;
+	background-color: white;
+	transition: all .3s;
+}
+.topnav ul li {
+	height: 100%;
+	background-color: blue;
+	display: inline-block;
+}
+.topnav ul li a {
+	text-decoration: none;
+	cursor: pointer;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 2px;
+}
+.topnav ul li a:hover {
+	color: black;
+	background: #f2f2f2;
+}
+.topnav form {
+	background-color: red;
+}
+.topnav form input[type=search] {
+	border: 0;
+	outline: 0;
+	font-style: normal;
+	display: inline-block;
+	background: yellow;
+	color: #f2f2f2;
+	text-align: left;
+	font-size: 16pt;
+	min-width: 240px;
+}
+.topnav form button {
+	border: 0;
+	outline: 0;
+	resize: 0;
+	font-style: normal;
+	display: inline-block;
+	background: #eee;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+}
+.topnav form button:active {
+	background: #222;
+}
+.topnav input, .topnav label {
+	display: none;
+}
+
+@media screen and (max-width: 700px) {
+	.topnav .logo {
+		padding: 2px 15px;
+	}
+	.topnav ul {
+		max-height: 0;
+		opacity: 0;
+		width: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+	.topnav ul li {
+		width: 100%;
+		margin: auto;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.topnav form input[type=search] {
+		font-size: 18pt;
+	}
+	.topnav label {
+		float: right;
+		position: relative;
+		display: flex;
+		cursor: pointer;
+		align-items: center;
+		justify-content: center;
+		border-radius: 5px;
+		background-color: #002fff;
+		width: 40px;
+		height: 40px;
+	}
+	.topnav label span {
+		display: flex;
+		position: relative;
+		border: 14px solid transparent;
+		border-top: 14px solid #000010;
+		transform: translateY(7px);
+		transition: transform linear .2s;
+	}
+	.topnav #nav-expand:checked ~ label span {
+		transform: rotate(180deg) translateY(7px);
+	}
+	.topnav #nav-expand:checked ~ ul {
+		max-height: 1000px;
+		opacity: 1;
+	}
 }

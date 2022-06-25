@@ -1,61 +1,66 @@
 /* background animation */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 background-content {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  min-width: 300px;
-  min-height: 300px;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	width: 100%;
+	height: 100%;
+	min-width: 300px;
+	min-height: 300px;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 background-content .cube {
-  padding: 0;
-  box-sizing: border-box;
-  width: 300px;
-  height: 300px;
-  margin: auto;
-  transform-style: preserve-3d;
-  transform: rotateX(-30deg);
-  animation: cube-rotate 8s linear infinite;
+	width: 300px;
+	height: 300px;
+	margin: auto;
+	transform-style: preserve-3d;
+	transform: rotateX(-30deg);
+	animation: cube-rotate 8s linear infinite;
 }
 @keyframes cube-rotate {
-  0% {
-    transform: rotateX(-30deg) rotateY(45deg);
-  }
-  100% {
-    transform: rotateX(-30deg) rotateY(135deg);
-  }
+	0% {
+		transform: rotateX(-30deg) rotateY(45deg);
+	}
+	100% {
+		transform: rotateX(-30deg) rotateY(135deg);
+	}
 }
 background-content .cube span {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#000000, #24d3ff);
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 background-content .cube span:first-child {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transform: rotateX(90deg) translateZ(150px);
-  background: #000000;
+	transform: rotateX(90deg) translateZ(150px);
+	background: #000000;
+}
+background-content .cube span:not(:first-child):not(:last-child) {
+	background: linear-gradient(#000000, #24d3ff);
+}
+background-content .cube span:nth-child(2) {
+	transform: translateZ(150px);
+}
+background-content .cube span:nth-child(3) {
+	transform: rotateY(90deg) translateZ(150px);
+}
+background-content .cube span:nth-child(4) {
+	transform: translateZ(-150px);
+}
+background-content .cube span:nth-child(5) {
+	transform: rotateY(90deg) translateZ(-150px);
 }
 background-content .cube span:last-child {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transform: rotateX(270deg) translateZ(170px);
-  background: #13c2ee;
-  filter: blur(20px);
-  box-shadow: 0 0 150px #24d3ff33,
-  0 0 170px #24d3ff66,
-  0 0 210px #24d3ff99,
-  0 0 280px #24d3ffcc,
-  0 0 320px #24d3ffff;
+	transform: rotateX(270deg) translateZ(170px);
+	background: #13c2ee;
+	filter: blur(20px);
+	box-shadow: 0 0 150px #24d3ff33,
+	0 0 170px #24d3ff66,
+	0 0 210px #24d3ff99,
+	0 0 280px #24d3ffcc,
+	0 0 320px #24d3ffff;
 }
