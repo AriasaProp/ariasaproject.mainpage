@@ -35,16 +35,16 @@ background-content .cube {
     transform: rotate(-30deg, 0deg) translateY(0);
   }
   20% {
-    transform: rotateX(-30deg, 72deg) translateY(20%);
+    transform: rotate(-30deg, 72deg) translateY(20%);
   }
   40% {
-    transform: rotateX(-30deg, 144deg) translateY(0);
+    transform: rotate(-30deg, 144deg) translateY(0);
   }
   60% {
-    transform: rotateX(-30deg, 216deg) translateY(0);
+    transform: rotate(-30deg, 216deg) translateY(0);
   }
   80% {
-    transform: rotateX(-30deg, 288deg) translateY(20%);
+    transform: rotate(-30deg, 288deg) translateY(20%);
   }
   100% {
     transform: rotate(-30deg, 360deg) translateY(0);
