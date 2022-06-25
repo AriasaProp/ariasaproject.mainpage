@@ -52,11 +52,11 @@ background-content .cube span:last-child {
   transform: rotateX(270deg) translateZ(170px);
   background: #ffffff;
   filter: blur(20px);
-  box-shadow: 0 0 120px #24d3ff33,
-  0 0 150px #24d3ff66,
-  0 0 180px #24d3ff99,
-  0 0 200px #24d3ffcc,
-  0 0 210px #24d3ffff;
+  box-shadow: 0 0 150px #24d3ff33,
+  0 0 170px #24d3ff66,
+  0 0 210px #24d3ff99,
+  0 0 280px #24d3ffcc,
+  0 0 320px #24d3ffff;
 }
 /* content */
 content {
