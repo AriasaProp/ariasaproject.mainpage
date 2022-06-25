@@ -133,7 +133,6 @@ content {
   resize: 0;
   margin: auto;
   font-style: normal;
-  resize: none;
   display: inline-block;
 }
 .topnav form input[type=search] {
