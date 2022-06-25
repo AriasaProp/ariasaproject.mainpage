@@ -34,18 +34,6 @@ background-content .cube {
   0% {
     transform: rotateX(-30deg) rotateY(0deg);
   }
-  20% {
-    transform: rotateX(-30deg) rotateY(72deg);
-  }
-  40% {
-    transform: rotateX(-30deg) rotateY(144deg);
-  }
-  60% {
-    transform: rotateX(-30deg) rotateY(216deg);
-  }
-  80% {
-    transform: rotateX(-30deg) rotateY(288deg);
-  }
   100% {
     transform: rotateX(-30deg) rotateY(360deg);
   }
