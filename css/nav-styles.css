@@ -40,7 +40,7 @@
 	box-sizing: border-box;
 }
 .topnav {
-	background: red /*#010101*/;
+	background: #010101;
 	overflow: hidden;
 	display: inline-block;
 	width: 100%;
@@ -50,58 +50,60 @@
 	transition: height 10s;
 }
 .topnav .logo {
+	display: block;
 	text-decoration: none;
 	cursor: pointer;
 	float: left;
 	text-align: center;
 	padding: 6px;
+	padding-left: 5%;
 	width: fit-content;
 	font-weight: bold;
 	color: white;
 }
 .topnav ul {
+	cursor: default;
 	display: inline-block;
+	float: right;
 	list-style: none;
 	font-size: 16pt;
-	background-color: white;
 	transition: all .3s;
 }
 .topnav ul li {
-	height: 100%;
-	background-color: blue;
 	display: inline-block;
 }
 .topnav ul li a {
+	display: block;
 	text-decoration: none;
 	cursor: pointer;
 	color: #f2f2f2;
 	text-align: center;
-	padding: 2px;
+	padding: 8px 16px;
 }
 .topnav ul li a:hover {
 	color: black;
 	background: #f2f2f2;
 }
-.topnav form {
-	background-color: red;
+.topnav ul li .search-bar {
+	display: block;
 }
 .topnav form input[type=search] {
 	border: 0;
 	outline: 0;
 	font-style: normal;
-	display: inline-block;
-	background: yellow;
+	display: inline;
+	background: transparent;
 	color: #f2f2f2;
 	text-align: left;
 	font-size: 16pt;
-	min-width: 240px;
+	min-width: 200px;
 }
 .topnav form button {
 	border: 0;
 	outline: 0;
 	resize: 0;
 	font-style: normal;
-	display: inline-block;
+	display: inline;
 	background: #eee;
 	cursor: pointer;
 	width: 20px;
@@ -127,13 +129,25 @@
 		flex-direction: column;
 	}
 	.topnav ul li {
+		display: inline-block;
+	}
+	.topnav form {
+		display: block;
 		width: 100%;
-		margin: auto;
-		flex-direction: column;
-		justify-content: center;
 	}
 	.topnav form input[type=search] {
-		font-size: 18pt;
+		display: inline-block;
+	}
+	.topnav form button {
+		border: 0;
+		outline: 0;
+		resize: 0;
+		font-style: normal;
+		display: inline-block;
+		background: #eee;
+		cursor: pointer;
+		width: 20px;
+		height: 20px;
 	}
 	.topnav label {
 		float: right;
@@ -161,5 +175,8 @@
 	.topnav #nav-expand:checked ~ ul {
 		max-height: 1000px;
 		opacity: 1;
+	}
+	.topnav #nav-expand:checked ~ .logo {
+		margin-left: auto;
 	}
 }
