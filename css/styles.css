@@ -32,22 +32,22 @@ background-content .cube {
 }
 @keyframes cube-rotate {
   0% {
-    transform: rotate(-30deg, 0deg) translateY(0);
+    transform: rotateX(-30deg) rotateY(0deg) translateY(0);
   }
   20% {
-    transform: rotate(-30deg, 72deg) translateY(20%);
+    transform: rotateX(-30deg) rotateY(72deg) translateY(20%);
   }
   40% {
-    transform: rotate(-30deg, 144deg) translateY(0);
+    transform: rotateX(-30deg) rotateY(144deg) translateY(0);
   }
   60% {
-    transform: rotate(-30deg, 216deg) translateY(0);
+    transform: rotateX(-30deg) rotateY(216deg) translateY(0);
   }
   80% {
-    transform: rotate(-30deg, 288deg) translateY(20%);
+    transform: rotateX(-30deg) rotateY(288deg) translateY(20%);
   }
   100% {
-    transform: rotate(-30deg, 360deg) translateY(0);
+    transform: rotateX(-30deg) rotateY(360deg) translateY(0);
   }
 }
 background-content .cube span {
