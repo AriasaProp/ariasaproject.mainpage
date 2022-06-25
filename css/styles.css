@@ -52,11 +52,11 @@ body {
   transform: rotateX(270deg) translateZ(170px);
   background: #24d3ff;
   filter: blur(20px);
-  box-shadow: 0 0 120px rgba(#24d3ff, 0.2),
-  0 0 150px rgba(#24d3ff, 0.4),
-  0 0 180px rgba(#24d3ff, 0.6),
-  0 0 200px rgba(#24d3ff, 0.8),
-  0 0 210px rgba(#24d3ff, 1);
+  box-shadow: 0 0 120px #24d3ff2c,
+  0 0 150px #24d3ff5a,
+  0 0 180px #24d3ff87,
+  0 0 200px #24d3ffb4,
+  0 0 210px #24d3ffff;
 }
 /* content */
 content {
