@@ -28,14 +28,14 @@ background-content .cube {
   margin: auto;
   transform-style: preserve-3d;
   transform: rotateX(-30deg);
-  animation: cube-rotate 12s ease infinite;
+  animation: cube-rotate 3s ease-out infinite;
 }
 @keyframes cube-rotate {
   0% {
     transform: rotateX(-30deg) rotateY(0deg);
   }
   100% {
-    transform: rotateX(-30deg) rotateY(360deg);
+    transform: rotateX(-30deg) rotateY(90deg);
   }
 }
 background-content .cube span {
