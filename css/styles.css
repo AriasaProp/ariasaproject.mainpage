@@ -1,5 +1,5 @@
 html {
-  background: #050505
+  background: #050505;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -90,9 +90,6 @@ content {
   padding: 0;
   box-sizing: border-box;
 }
-.topnav * {
-  display: inline-block;
-}
 .topnav a {
   text-decoration: none;
   cursor: pointer;
@@ -100,7 +97,6 @@ content {
   color: #f2f2f2;
   text-align: center;
   padding: 6px;
-
   margin: 0;
   box-sizing: border-box;
 }
@@ -108,7 +104,7 @@ content {
   color: black;
   background: #f2f2f2;
 }
-.topnav .active {
+.topnav a .active {
   font-weight: bold;
   background: #04AA6D;
   color: white;
@@ -119,7 +115,6 @@ content {
   margin-right: 0;
   float: right;
   width: auto;
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
