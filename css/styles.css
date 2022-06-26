@@ -13,7 +13,6 @@ body {
 }
 /* background animation */
 background-content {
-  background: white;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -38,10 +37,10 @@ background-content .cube {
 }
 @keyframes cube-rotate {
   0% {
-    transform: rotateX(-30deg) rotateY(0deg);
+    transform: rotateX(-30deg) rotateY(45deg);
   }
   100% {
-    transform: rotateX(-30deg) rotateY(90deg);
+    transform: rotateX(-30deg) rotateY(135deg);
   }
 }
 background-content .cube span {
