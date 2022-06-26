@@ -27,7 +27,6 @@ background-content {
   align-items: center;
 }
 background-content .cube {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
   width: 300px;
