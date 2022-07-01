@@ -59,11 +59,8 @@
 	margin: 0;
 	padding: 0;
 	cursor: default;
-<<<<<<< HEAD
 	float: right;
-=======
 	display: inline-block;
->>>>>>> 7a3a8211e2cdbfcb6f2a94c1a4c1b8963d45f3a9
 	list-style: none;
 	display: inline-block;
 	height: 100%;
@@ -95,31 +92,19 @@
 	height: 100%;
 	display: block;
 }
-<<<<<<< HEAD
 .topnav ul li form input[type=search] {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
-=======
-.topnav ul li .search-bar form input[type=search] {
->>>>>>> 7a3a8211e2cdbfcb6f2a94c1a4c1b8963d45f3a9
 	border: 0;
 	outline: 0;
 	font-style: normal;
 	display: inline-block;
-	background: red;
+	background: transparent;
 	color: #f2f2f2;
 	text-align: left;
 	font-size: 16pt;
 }
-<<<<<<< HEAD
 .topnav ul li form button {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-=======
-.topnav ul li .search-bar form button {
->>>>>>> 7a3a8211e2cdbfcb6f2a94c1a4c1b8963d45f3a9
 	border: 0;
 	outline: 0;
 	resize: 0;
@@ -127,11 +112,8 @@
 	display: inline-block;
 	background: #eee;
 	cursor: pointer;
-<<<<<<< HEAD
 	width: 40px;
 	height: 40px;
-=======
->>>>>>> 7a3a8211e2cdbfcb6f2a94c1a4c1b8963d45f3a9
 }
 .topnav ul li form button:active {
 	margin: 0;
@@ -164,29 +146,18 @@
 		display: inline-block;
 		width: 100%;
 	}
-<<<<<<< HEAD
 	.topnav ul li form {
 		display: block;
 		width: 100%;
 	}
 	.topnav ul li form input[type=search] {
-=======
-	.topnav ul li .search-bar form {
 		display: block;
-		width: 100%;
-	}
-	.topnav ul li .search-bar form input[type=search] {
->>>>>>> 7a3a8211e2cdbfcb6f2a94c1a4c1b8963d45f3a9
 		display: inline-block;
 		margin-left: 1vw;
 		width: 90%;
 		height: 100%;
 	}
-<<<<<<< HEAD
 	.topnav ul li form button {
-=======
-	.topnav ul li .search-bar form button {
->>>>>>> 7a3a8211e2cdbfcb6f2a94c1a4c1b8963d45f3a9
 		border: 0;
 		outline: 0;
 		resize: 0;
