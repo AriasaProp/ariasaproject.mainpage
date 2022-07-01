@@ -1,3 +1,5 @@
+
+/*
 @font-face {
 	font-family: 'icomoon';
 	src: url('nav-fonts/icomoon.eot?878zuc');
@@ -8,7 +10,6 @@
 	font-weight: normal;
 	font-style: normal;
 }
-/*
 .icon-nav-menu {
 	font-family: 'icomoon';
 	content: "\e900";
@@ -27,15 +28,19 @@
 }
 */
 .topnav {
-	display: block;
+	display: inline-flex;
 	margin: 0;
 	padding: 0 15px;
 	background: #333333;
+	min-height: 70px;
 	overflow: hidden;
 	width: 100%;
+	box-sizing: border-box;
 	font-size: 18pt;
 	font-weight: bold;
 	transition: height 10s;
+	justify-content: center;
+	align-items: center;
 }
 .topnav a.logo {
 	font-family: 'Montserrat', sans-serif;
@@ -44,115 +49,82 @@
 	cursor: pointer;
 	border: 4px solid white;
 	text-align: center;
-	padding: 2px 20px;
-	margin: 1px 1px 15px 0;
+	padding: 4px 22px;
+	box-sizing: border-box;
+	margin-right: auto;
 	color: white;
 	transition: all ease-in .3s;
 }
-.topnav ul {
-	margin: 0;
-	padding: 0;
-	cursor: default;
-	display: inline-block;
-	list-style: none;
-	height: 100%;
+.topnav input, .topnav label, .topnav .nav-menu input[type=search] {
+	display: none;
 }
-.topnav ul li {
-	margin: 0;
+.topnav .nav-menu {
+	float: right;
 	padding: 0;
+	margin: 0 auto;
+	transition: all ease-in .3s;
 	display: inline-block;
 }
-.topnav ul li a {
-	height: 100%;
-	font-size: 16pt;
+.topnav .nav-menu a {
+	display: inline-block;
+	font-size: 14pt;
 	font-style: normal;
 	margin: 0;
-	display: block;
+	display: inline-block;
 	text-decoration: none;
 	cursor: pointer;
 	color: #f2f2f2;
 	text-align: center;
-	padding: 12px;
+	padding: 10px;
+	border-radius: 4pt;
 }
-.topnav ul li a:hover {
-	color: black;
+.topnav .nav-menu a:hover {
+	color: #000;
 	background: #f2f2f2;
 }
-.topnav ul li form {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	display: block;
-}
-.topnav ul li form input[type=search] {
+/*
+.topnav .nav-menu input[type=search] {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	outline: 0;
+	width: auto;
 	font-style: normal;
 	display: inline-block;
 	background: transparent;
 	color: #f2f2f2;
 	text-align: left;
-	font-size: 16pt;
+	font-size: 14pt;
 }
-.topnav ul li form button {
+*/
+.topnav .nav-menu label {
+	display: inline-block;
 	border: 0;
 	outline: 0;
-	resize: 0;
-	font-style: normal;
-	display: inline-block;
-	background: #eee;
-	cursor: pointer;
-	width: 40px;
-	height: 40px;
-}
-.topnav ul li form button:active {
+	padding: 10px;
 	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	background: #222;
+	font-style: normal;
+	font-size: 20pt;
+	cursor: pointer;
+	text-align: center;
+	color: #f2f2f2;
+	border-radius: 6pt;
 }
-.topnav input, .topnav label {
-	margin: auto;
-	padding: 0;
-	display: none;
+.topnav .nav-menu label:active {
+	background: #222;
 }
 
 @media screen and (max-width: 700px) {
-	.topnav {
-		padding: 0 0 15px 0;
-	}
 	.topnav a.logo {
 		font-size: 14pt;
 		margin-top: 5px;
 		margin-bottom: 5px;
 		padding: 5px 15px;
-	}
-	.topnav ul {
-		max-height: 0;
-		width: 100%;
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		transition: all ease-in .3s;
-	}
-	.topnav ul li {
-		display: inline-block;
 		width: 100%;
 	}
-	.topnav ul li form {
-		display: block;
-		width: 100%;
-	}
-	.topnav ul li form input[type=search] {
-		margin-left: 1vw;
-		width: 90vw;
-	}
-	.topnav ul li form button {
-		width: 40px;
-		height: 40px;
-	}
+	.topnav .nav-menu {
+		display: none;
+	}}
 	.topnav label {
 		float: right;
 		position: relative;
@@ -178,8 +150,9 @@
 	.topnav #nav-expand:checked ~ label span {
 		transform: rotate(-45deg) translate(4px, 4px);
 	}
-	.topnav #nav-expand:checked ~ ul {
-		max-height: 300px;
+	.topnav #nav-expand:checked ~ .nav-menu {
+		display: flex;
+		flex-direction: column;
 	}
 	.topnav #nav-expand:checked ~ a.logo {
 		margin-left: 15%;
