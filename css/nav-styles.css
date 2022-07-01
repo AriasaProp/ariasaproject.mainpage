@@ -57,10 +57,8 @@
 	margin: 0;
 	padding: 0;
 	cursor: default;
-	float: right;
 	display: inline-block;
 	list-style: none;
-	display: inline-block;
 	height: 100%;
 }
 .topnav ul li {
