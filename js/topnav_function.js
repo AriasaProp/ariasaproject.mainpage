@@ -1,9 +1,4 @@
-function expand()
-{
-  var x = document.getElementById("ntopnav");
-  if (x.className === "topnav") {
-	x.className += " mini";
-  } else {
-	x.className = "topnav";
-  }
-}
+// for hide content on loading page
+window.onload = function(){
+	document.getElementById("cntent").style.display = "block";
+};
