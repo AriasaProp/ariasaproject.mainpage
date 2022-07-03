@@ -7,7 +7,6 @@
 	url('nav-fonts/icomoon.svg?878zuc#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
-	font-display: block;
 }
 .icon-nav-menu {
 	/* use !important to prevent issues with browser extensions that change fonts */
@@ -153,7 +152,7 @@
 		display: block;
 		display: inline-block;
 		margin-left: 1vw;
-		width: 90%;
+		width: calc(100℅-50px);
 		height: 100%;
 	}
 	.topnav ul li form button {
