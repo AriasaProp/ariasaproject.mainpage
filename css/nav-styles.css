@@ -146,20 +146,10 @@
 		width: 100%;
 	}
 	.topnav ul li form input[type=search] {
-		display: block;
-		display: inline-block;
 		margin-left: 1vw;
 		width: 90vw;
-		height: 100%;
 	}
 	.topnav ul li form button {
-		border: 0;
-		outline: 0;
-		resize: 0;
-		font-style: normal;
-		display: inline-block;
-		background: #eee;
-		cursor: pointer;
 		width: 40px;
 		height: 40px;
 	}
@@ -176,12 +166,6 @@
 		margin: 5px;
 	}
 	.topnav label span {
-		font-family: 'icomoon';
-		font-style: normal;
-		font-weight: normal;
-		font-variant: normal;
-		text-transform: none;
-		content: "\e902";
 		width: 12px;
 		height: 12px;
 		background-color: transparent;
