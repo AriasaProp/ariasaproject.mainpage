@@ -8,13 +8,12 @@
 	font-weight: normal;
 	font-style: normal;
 }
+/*
 .icon-nav-menu {
-	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: 'icomoon';
 	content: "\e900";
 }
 .icon-erase {
-	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: 'icomoon';
 	content: "\e901";
 }
@@ -26,6 +25,7 @@
 	text-transform: none;
 	content: "\e902";
 }
+*/
 .topnav {
 	display: block;
 	margin: 0;
