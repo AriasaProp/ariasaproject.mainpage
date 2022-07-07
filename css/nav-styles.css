@@ -125,7 +125,7 @@
 	}
 	.topnav .nav-menu {
 		display: none;
-	}}
+	}
 	.topnav .nav-1 label {
 		float: right;
 		position: relative;
@@ -155,7 +155,7 @@
 		display: flex;
 		flex-direction: column;
 	}
-	.topnav . nav-1 #nav-expand:checked ~ a.logo {
+	.topnav .nav-1 #nav-expand:checked ~ a.logo {
 		margin-left: 15%;
 	}
 }
