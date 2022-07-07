@@ -116,7 +116,7 @@
 }
 
 @media screen and (max-width: 700px) {
-	.topnav a.logo {
+	.topnav .nav-1 a.logo {
 		font-size: 14pt;
 		margin-top: 5px;
 		margin-bottom: 5px;
@@ -126,7 +126,7 @@
 	.topnav .nav-menu {
 		display: none;
 	}}
-	.topnav label {
+	.topnav .nav-1 label {
 		float: right;
 		position: relative;
 		display: flex;
@@ -138,7 +138,7 @@
 		height: 40px;
 		margin: 5px;
 	}
-	.topnav label span {
+	.topnav .nav-1 label span {
 		width: 12px;
 		height: 12px;
 		background-color: transparent;
@@ -148,14 +148,14 @@
 		transform: rotate(-135deg) translate(4px, 4px);
 		transition: transform linear .2s;
 	}
-	.topnav #nav-expand:checked ~ label span {
+	.topnav .nav-1 #nav-expand:checked ~ label span {
 		transform: rotate(-45deg) translate(4px, 4px);
 	}
-	.topnav #nav-expand:checked ~ .nav-menu {
+	.topnav .nav-1 #nav-expand:checked ~ .nav-menu {
 		display: flex;
 		flex-direction: column;
 	}
-	.topnav #nav-expand:checked ~ a.logo {
+	.topnav . nav-1 #nav-expand:checked ~ a.logo {
 		margin-left: 15%;
 	}
 }
