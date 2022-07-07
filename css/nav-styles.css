@@ -42,7 +42,7 @@
 	justify-content: center;
 	align-items: center;
 }
-.topnav a.logo {
+.topnav .nav-1 a.logo {
 	font-family: 'Montserrat', sans-serif;
 	display: inline-block;
 	text-decoration: none;
@@ -55,7 +55,7 @@
 	color: white;
 	transition: all ease-in .3s;
 }
-.topnav input, .topnav label, .topnav .nav-menu input[type=search] {
+.topnav input, .topnav .nav-1 label, .topnav .nav-menu input[type=search] {
 	display: none;
 }
 .topnav .nav-menu {
