@@ -29,9 +29,10 @@ h1 {
     padding: 2px;
     margin: 3.5px;
     font-family: georgia;
-    text-align: center
+    text-align: center;
 }
 p {
     padding: 2px;
     margin: 4.5px;
+	text-align: justify;
 }
