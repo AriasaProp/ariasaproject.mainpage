@@ -1,30 +1,72 @@
-html {
-	margin: 0;
-	padding: 0;
-    background: #000000;
+* {
+    margin: 0;
+    padding: 0;
     color: #fafafa;
 }
+
+html {
+    background: #1a1a1a;
+}
+
 body {
-	margin: 0;
-	padding: 0;
-    font-family: sans-serif;
+    font-family: arial;
     font-size: 14pt;
 }
-/* content */
+
+title {
+    font-size: 25pt;
+    font-weight: bold;
+}
+
+background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
 content {
-	margin: 0;
-	padding: 0;
     position: absolute;
     width: 100%;
     height: 100%;
 }
-/* content */
-title {
-	margin: 0;
-	padding: 0;
-    font-size: 25pt;
-    font-weight: bold;
+
+content nav {
+    user-select: none;
+    display: block;
+    padding: 1pt;
+    background: #000000;
+    color: white;
 }
+
+content nav > a {
+    font-family: Brush Script MT;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 25pt;
+    font-style: bold;
+}
+
+content nav ul {
+    float: right;
+    vertical-align: center;
+    display: inline-block;
+    background-color: #3D99CE;
+    text-align: center;
+}
+
+content nav ul il {
+    display: inline-block;
+}
+
+content nav ul il:hover {
+    background-color: #0000ff;
+}
+
+content nav ul il a {
+    text-decoration: none;
+    font-size: 20pt;
+}
+
 h1 {
     padding: 2px;
     margin: 3.5px;
@@ -34,5 +76,5 @@ h1 {
 p {
     padding: 2px;
     margin: 4.5px;
-	text-align: justify;
+    text-align: justify;
 }
