@@ -36,14 +36,8 @@ content {
     height: 100%;
 }
 
-content input[type=checkbox].sidenav {
-    margin: 0;
-    padding: 0;
+content input.sidenav {
     display: none;
-}
-
-content input[type=checkbox].sidenav:checked ~ div nav {
-    
 }
 
 content div {
@@ -53,36 +47,32 @@ content div {
 
 content div nav {
     user-select: none;
-    display: block;
+    display: table;
     margin: 0;
     padding: 0;
     color: white;
     background: #000000;
     position: fixed;
     width: 100%;
-    height: 60px;
     line-height: 60px;
 }
 
 content div nav > a {
-    margin-left: 10pt;
     font-family: Brush Script MT;
     display: inline-block;
     text-decoration: none;
     font-size: 25pt;
     font-style: bold;
-    margin: 0;
-    padding: 0;
+    margin-left: 10pt;
+    padding: 0 0 0 25px;
 }
 
 content div nav label {
-    font-size: 25pt;
-    float: right;
-    padding: 0 10px 0;
-    margin: 0;
+    display: none;
 }
 
 content div nav ul {
+    font-size: 12pt;
     list-style: none;
     float: right;
     display: inline-block;
@@ -92,57 +82,84 @@ content div nav ul {
 }
 
 content div nav ul li {
-    font-size: 15pt;
-    display: inline-block;
+    display: inline;
     margin: 0;
-    padding: 0 20px 0;
-    border-left: 2px solid;
-    border-image: linear-gradient(to top, #ffffff00, #aaaaaaff, #ffffff00) 1;
+    padding: 0 15px 0;
 }
 
 content div nav ul li:hover {
     background-color: #ffffff11;
 }
 
-content div nav ul li a {
+content div nav ul li > a {
+    font-style: bold;
+    font-weight: 10px;
     color: white;
     margin: 0;
     padding: 0;
-    display: inline-block;
     text-decoration: none;
 }
 
 h1 {
     padding: 2px;
-    margin: 3.5px;
+    margin: 3px;
     font-family: georgia;
     text-align: center;
 }
 p {
     padding: 2px;
-    margin: 4.5px;
+    margin: 5px;
     text-align: justify;
 }
 
-.hide_on_smalll {
-    
-}
-
-.hide_on_big {
-    display: none;
-}
-
 @media screen and (max-width: 900px) {
-
-    .hide_on_small {
-        display: none !important;
-    }
-
-    .hide_on_big {
-        display: block !important;
+    content div nav label {
+        display: inline-block;
+        padding: 0 15px 0;
+        margin: 0;
     }
     
+    content div nav label span {
+        display: block;
+        position: relative;
+        width: 36px;
+        height: 4px;
+        margin: 4px 0;
+        background: #ffffff;
+        border-radius: 3px;
+        transform-origin: 18px 3px;
+        opacity: 1;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+    }
+        
+    content div nav label:hover {
+        background-color: #ffffff22;
+    }
+
+    content div nav ul {
+        display: none;
+    }
+    content div nav ul li {
+        display: block;
+        margin: 0;
+        padding: 0 15px 0;
+    }
     
+    content input.sidenav:checked ~ div nav label span:nth-child(1) {
+        transform: translate(-0px, 10px) rotate(45deg);
+    }
+    content input.sidenav:checked ~ div nav label span:nth-child(2) {
+        opacity: 0;
+    }
+    content input.sidenav:checked ~ div nav label span:nth-child(3) {
+        transform: translate(-0px, -10px) rotate(-45deg);
+    }
+    content input.sidenav:checked ~ div nav ul {
+        display: block;
+    }
+
     
     
     
