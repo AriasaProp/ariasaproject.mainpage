@@ -45,9 +45,13 @@ content div {
     height: 60px;
 }
 
+content div * {
+    transition: 0.32s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
 content div nav {
     user-select: none;
-    display: table;
+    display: block;
     margin: 0;
     padding: 0;
     color: white;
@@ -63,7 +67,6 @@ content div nav > a {
     text-decoration: none;
     font-size: 25pt;
     font-style: bold;
-    margin-left: 10pt;
     padding: 0 0 0 25px;
 }
 
@@ -114,24 +117,24 @@ p {
 
 @media screen and (max-width: 900px) {
     content div nav label {
+    		float: right;
         display: inline-block;
-        padding: 0 15px 0;
+        padding: 5px 15px;
         margin: 0;
     }
     
     content div nav label span {
         display: block;
         position: relative;
+        padding: 0;
         width: 36px;
-        height: 4px;
-        margin: 4px 0;
+        height: 5px;
+        margin-top: 7px;
+        margin-bottom: 7px;
         background: #ffffff;
-        border-radius: 3px;
-        transform-origin: 18px 3px;
+        border-radius: 2px;
+        transform-origin: center;
         opacity: 1;
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    opacity 0.55s ease;
     }
         
     content div nav label:hover {
@@ -140,21 +143,35 @@ p {
 
     content div nav ul {
         display: none;
+        width: 100%;
+        animation: exnav 1s;
+        
+    }
+    @keyframes exnav {
+    	0% {
+    		max-height: 0;
+    		opacity: 0;
+    	}
+    	100% {
+    		max-height: 100%;
+    		opacity: 1;
+    	}
     }
     content div nav ul li {
         display: block;
+        width: 100%;
         margin: 0;
         padding: 0 15px 0;
     }
     
     content input.sidenav:checked ~ div nav label span:nth-child(1) {
-        transform: translate(-0px, 10px) rotate(45deg);
+        transform: translate(0, 12px) rotate(-45deg);
     }
     content input.sidenav:checked ~ div nav label span:nth-child(2) {
         opacity: 0;
     }
     content input.sidenav:checked ~ div nav label span:nth-child(3) {
-        transform: translate(-0px, -10px) rotate(-45deg);
+        transform: translate(0, -12px) rotate(45deg);
     }
     content input.sidenav:checked ~ div nav ul {
         display: block;
