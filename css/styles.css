@@ -45,10 +45,6 @@ content div {
     height: 60px;
 }
 
-content div * {
-    transition: 0.32s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
 content div nav {
     user-select: none;
     display: block;
@@ -84,23 +80,24 @@ content div nav ul {
     padding: 0;
 }
 
-content div nav ul li {
-    display: inline;
-    margin: 0;
-    padding: 0 15px 0;
-}
-
-content div nav ul li:hover {
-    background-color: #ffffff11;
-}
-
-content div nav ul li > a {
+content div nav ul > a {
+		display: inline-block;
     font-style: bold;
     font-weight: 10px;
     color: white;
     margin: 0;
     padding: 0;
     text-decoration: none;
+    text-align: center;
+}
+
+content div nav ul > a:hover {
+    background-color: #ffffff11;
+}
+
+content div nav ul > a li {
+		display: inline;
+		padding: 0 15px 0;
 }
 
 h1 {
@@ -129,18 +126,21 @@ p {
         padding: 0;
         width: 36px;
         height: 5px;
-        margin-top: 7px;
-        margin-bottom: 7px;
+        margin: 7px 0;
         background: #ffffff;
         border-radius: 2px;
         transform-origin: center;
         opacity: 1;
+    		transition: 0.32s cubic-bezier(0.77,0.2,0.05,1.0);
     }
         
     content div nav label:hover {
         background-color: #ffffff22;
     }
 
+    content div nav ul > a {
+    		display: block;
+    }
     content div nav ul {
         display: none;
         width: 100%;
@@ -149,19 +149,11 @@ p {
     }
     @keyframes exnav {
     	0% {
-    		max-height: 0;
     		opacity: 0;
     	}
     	100% {
-    		max-height: 100%;
     		opacity: 1;
     	}
-    }
-    content div nav ul li {
-        display: block;
-        width: 100%;
-        margin: 0;
-        padding: 0 15px 0;
     }
     
     content input.sidenav:checked ~ div nav label span:nth-child(1) {
