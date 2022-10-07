@@ -22,6 +22,7 @@ title {
 
 header {
     height: 60px;
+    display: inline;
 }
 
 input.sidenav {
@@ -30,7 +31,7 @@ input.sidenav {
 
 nav {
     user-select: none;
-    display: block;
+    display: inline;
     margin: 0;
     padding: 0;
     color: white;
