@@ -20,32 +20,15 @@ title {
     align: center;
 }
 
-background {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-}
-
-content {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-content input.sidenav {
-    display: none;
-}
-
-content div {
-    position: relative;
+header {
     height: 60px;
 }
 
-content div nav {
+input.sidenav {
+    display: none;
+}
+
+nav {
     user-select: none;
     display: block;
     margin: 0;
@@ -54,24 +37,25 @@ content div nav {
     background: #000000;
     position: fixed;
     width: 100%;
-    line-height: 60px;
+    line-height: 54px;
 }
 
-content div nav > a {
-    font-family: Brush Script MT;
+nav span {
+    font-family: Fantasy;
     display: inline-block;
-    text-decoration: none;
-    font-size: 25pt;
+    font-size: 20pt;
     font-style: bold;
+    margin: 0;
     padding: 0 0 0 25px;
+    text-decoration: none;
 }
 
-content div nav label {
+nav label {
     display: none;
 }
 
-content div nav ul {
-    font-size: 12pt;
+nav ul {
+    font-size: 15pt;
     list-style: none;
     float: right;
     display: inline-block;
@@ -80,30 +64,34 @@ content div nav ul {
     padding: 0;
 }
 
-content div nav ul > a {
-		display: inline-block;
+nav ul > a {
+    font-family: Fantasy;
+    display: inline-block;
     font-style: bold;
     font-weight: 10px;
     color: white;
     margin: 0;
     padding: 0;
     text-decoration: none;
+}
+
+nav ul > a:hover {
+    background-color: #ffffffaa;
+}
+
+nav ul > a li {
+    display: inline;
+}
+
+footer {
+    background: #aaaaaa;
     text-align: center;
 }
 
-content div nav ul > a:hover {
-    background-color: #ffffff11;
-}
-
-content div nav ul > a li {
-		display: inline;
-		padding: 0 15px 0;
-}
-
 h1 {
+    font-family: Times New Roman;
     padding: 2px;
     margin: 3px;
-    font-family: georgia;
     text-align: center;
 }
 p {
@@ -113,59 +101,47 @@ p {
 }
 
 @media screen and (max-width: 900px) {
-    content div nav label {
-    		float: right;
+    nav label {
+    	float: right;
         display: inline-block;
-        padding: 5px 15px;
-        margin: 0;
+        padding: 8px 15px;
     }
     
-    content div nav label span {
+    nav label span {
         display: block;
-        position: relative;
         padding: 0;
         width: 36px;
         height: 5px;
         margin: 7px 0;
-        background: #ffffff;
+        background-color: #ffffff;
         border-radius: 2px;
         transform-origin: center;
         opacity: 1;
-    		transition: 0.32s cubic-bezier(0.77,0.2,0.05,1.0);
+    	transition: 0.22s cubic-bezier(0.77,0.2,0.05,1.0);
     }
         
-    content div nav label:hover {
-        background-color: #ffffff22;
+    nav label:hover {
+        background-color: #ffffffaa;
     }
 
-    content div nav ul > a {
-    		display: block;
+    nav ul > a {
+    	display: block;
     }
-    content div nav ul {
+    nav ul {
         display: none;
         width: 100%;
-        animation: exnav 1s;
-        
-    }
-    @keyframes exnav {
-    	0% {
-    		opacity: 0;
-    	}
-    	100% {
-    		opacity: 1;
-    	}
     }
     
-    content input.sidenav:checked ~ div nav label span:nth-child(1) {
+    input.sidenav:checked ~ nav label span:nth-child(1) {
         transform: translate(0, 12px) rotate(-45deg);
     }
-    content input.sidenav:checked ~ div nav label span:nth-child(2) {
+    input.sidenav:checked ~ nav label span:nth-child(2) {
         opacity: 0;
     }
-    content input.sidenav:checked ~ div nav label span:nth-child(3) {
+    input.sidenav:checked ~ nav label span:nth-child(3) {
         transform: translate(0, -12px) rotate(45deg);
     }
-    content input.sidenav:checked ~ div nav ul {
+    input.sidenav:checked ~ nav ul {
         display: block;
     }
 
@@ -190,98 +166,51 @@ p {
 }
 
 
-
 @font-face {
-
     font-family: 'main_icon';
-  
-  src: url('../font/main_icon.eot?78352389');
-  
-  src: url('../font/main_icon.eot?78352389#iefix') format('embedded-opentype'),
-  
-       url('../font/main_icon.woff2?78352389') format('woff2'),
-  
-       url('../font/main_icon.woff?78352389') format('woff'),
-
+    src: url('../font/main_icon.eot?78352389');
+    src: url('../font/main_icon.eot?78352389#iefix') format('embedded-opentype'),
+         url('../font/main_icon.woff2?78352389') format('woff2'),
+         url('../font/main_icon.woff?78352389') format('woff'),
          url('../font/main_icon.ttf?78352389') format('truetype'),
-  
-       url('../font/main_icon.svg?78352389#main_icon') format('svg');
-
-    font-weight: normal;
-  
-  font-style: normal;
-
+         url('../font/main_icon.svg?78352389#main_icon') format('svg');
+    font-weight: normal;  
+    font-style: normal;
 }
 
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-
 /*
-
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-
   @font-face {
-
     font-family: 'main_icon';
-
     src: url('../font/main_icon.svg?78352389#main_icon') format('svg');
-
   }
-
 }
-
 */
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
-
     font-family: "main_icon";
-
     font-style: normal;
-
     font-weight: normal;
-
     speak: never;
-
-
     display: inline-block;
-
     text-decoration: inherit;
-
     width: 1em;
-
     margin-right: .2em;
-
     text-align: center;
-
     /* opacity: .8; */
-
     font-variant: normal;
-
     text-transform: none;
-
-
     /* fix buttons height, for twitter bootstrap */
-
     line-height: 1em;
-
-
     /* Animation center compensation - margins should be symmetric */
-
     /* remove if not needed */
-
     margin-left: .2em;
-
-
     /* you can be more comfortable with increased icons size */
-
     /* font-size: 120%; */
-
     -webkit-font-smoothing: antialiased;
-
     -moz-osx-font-smoothing: grayscale;
-
-
 }
 
 
