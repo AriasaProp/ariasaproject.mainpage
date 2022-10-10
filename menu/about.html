@@ -6,9 +6,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="../css/styles.css" rel="stylesheet">
+	<script src="script/main_update.js"></script>
 </head>
 <body>
-	<header></header>
 	<input type="checkbox" id="nav-switch" class="sidenav"/>
 	<nav role="navigation">
 		<span class="icon-about">About</span>
@@ -17,13 +17,13 @@
 			<span></span>
 			<span></span>
 		</label>
-		<ul>
-			<a href="dashboard.html"><li class="icon-home">Dashboard</li></a>
-			<a href="#"><li class="icon-content">Content</li></a>
-			<a href="#"><li class="icon-setting">Setting</li></a>
-		</ul>
+		<div>
+			<a class="icon-home" href="dashboard.html">Dashboard</a>
+			<a class="icon-content" href="#">Content</a>
+			<a class="icon-setting" href="#">Setting</a>
+		</div>
 	</nav>
-	<div style="height: 60px;"></div>
+	<header></header>
 	<h1>Lorem ipsum dolor</h1>
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet vehicula nisl. Morbi libero dui, volutpat vitae sem id, viverra rutrum neque. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed sed erat metus. Mauris nec quam ac sem rhoncus vehicula eget sed erat. Cras feugiat tempor dui a dapibus. Nam in metus nec metus ultricies consectetur. Cras in elementum mauris. Aliquam gravida euismod pretium.
@@ -57,6 +57,9 @@
 	</p>
 	<footer>
 		<h1>Footer</h1>
+		<p style="font-familiy: Ubuntu,sans-serif; text-align: center;">
+			Now <span id="datetime">10:00</span>
+		</p>
 		<p>
 			Author: I Komang Widi Ada Ariasa<br>
 			<a href="mailto:ikomangwidiadaariasa12@gmail.com">email: ikomangwidiadaariasa12@gmail.com</a>

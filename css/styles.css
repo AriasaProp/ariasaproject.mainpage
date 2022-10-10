@@ -21,8 +21,8 @@ title {
 }
 
 header {
-    height: 60px;
-    display: inline;
+    height: 64px;
+    display: block;
 }
 
 input.sidenav {
@@ -55,9 +55,8 @@ nav label {
     display: none;
 }
 
-nav ul {
+nav div {
     font-size: 15pt;
-    list-style: none;
     float: right;
     display: inline-block;
     text-align: center;
@@ -65,26 +64,27 @@ nav ul {
     padding: 0;
 }
 
-nav ul > a {
+nav div > a {
     font-family: Fantasy;
     display: inline-block;
     font-style: bold;
     font-weight: 10px;
     color: white;
     margin: 0;
-    padding: 0;
+    padding: 0 15px;
     text-decoration: none;
 }
 
-nav ul > a:hover {
+nav div > a:hover {
     background-color: #ffffffaa;
 }
 
-nav ul > a li {
+nav div > a li {
     display: inline;
 }
 
 footer {
+    font-family:Ubuntu,sans-serif;
     background: #aaaaaa;
     text-align: center;
 }
@@ -125,10 +125,10 @@ p {
         background-color: #ffffffaa;
     }
 
-    nav ul > a {
+    nav div > a {
     	display: block;
     }
-    nav ul {
+    nav div {
         display: none;
         width: 100%;
     }
@@ -142,7 +142,7 @@ p {
     input.sidenav:checked ~ nav label span:nth-child(3) {
         transform: translate(0, -12px) rotate(45deg);
     }
-    input.sidenav:checked ~ nav ul {
+    input.sidenav:checked ~ nav div {
         display: block;
     }
 
