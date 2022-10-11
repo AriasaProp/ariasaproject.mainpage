@@ -1,10 +1,11 @@
-var nIntervId;
+var datetimeSpan = document.getElementById('datetime');
+const dateFormat = {hour:'2-digit', minute:'2-digit', weekday:'long', day:'2-digit', month:'short', year:'numeric'};
+
+update();
+let nIntervId = setInterval(update(), 60000); // per minutes = 60000 ms
+
 
 function update() {
-	var dt = new Date();
-	document.getElementById("datetime").innerHTML = dt.toLocaleString();
+	let d = new Date();
+	datetimeSpan.innerHTML = d.toLocaleString('id', dateFormat);
 }
-
-$(function() {
-	nIntervId = setInterval(update, 1000*60);
-});
