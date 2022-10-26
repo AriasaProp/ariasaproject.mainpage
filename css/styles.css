@@ -1,3 +1,26 @@
+@font-face {
+    font-family: 'main_icon';
+    src: url('../font/main_icon.eot?78352389');
+    src: url('../font/main_icon.eot?78352389#iefix') format('embedded-opentype'),
+         url('../font/main_icon.woff2?78352389') format('woff2'),
+         url('../font/main_icon.woff?78352389') format('woff'),
+         url('../font/main_icon.ttf?78352389') format('truetype'),
+         url('../font/main_icon.svg?78352389#main_icon') format('svg');
+    font-weight: normal;  
+    font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'main_icon';
+    src: url('../font/main_icon.svg?78352389#main_icon') format('svg');
+  }
+}
+*/
+
 html {
     background: #1a1a1a;
     margin: 0;
@@ -83,22 +106,44 @@ nav div > a li {
     display: inline;
 }
 
-footer {
-    font-family: Ubuntu,sans-serif;
-    text-align: center;
+header {
+    display: block;
 }
 
-h1 {
+content {
+    display: flex;
+    flex-direction: row;
+}
+
+content div.ext {
+    
+}
+content div.main {
+    background: #00000022;
+    flex-grow: 1;
+}
+content div.time {
+    
+}
+
+content h1 {
     font-family: Times New Roman;
     padding: 2px;
-    margin: 3px;
+    margin: 3px; 
     text-align: center;
 }
-p {
+content p {
     padding: 2px;
     margin: 5px;
     text-align: justify;
 }
+
+footer {
+    display: block;
+    font-family: Ubuntu,sans-serif;
+    text-align: center;
+}
+
 
 @media screen and (max-width: 900px) {
     nav label {
@@ -144,7 +189,10 @@ p {
     input.sidenav:checked ~ nav div {
         display: block;
     }
-
+    
+    content {
+        flex-direction: column;
+    }
     
     
     
@@ -165,29 +213,6 @@ p {
     
 }
 
-
-@font-face {
-    font-family: 'main_icon';
-    src: url('../font/main_icon.eot?78352389');
-    src: url('../font/main_icon.eot?78352389#iefix') format('embedded-opentype'),
-         url('../font/main_icon.woff2?78352389') format('woff2'),
-         url('../font/main_icon.woff?78352389') format('woff'),
-         url('../font/main_icon.ttf?78352389') format('truetype'),
-         url('../font/main_icon.svg?78352389#main_icon') format('svg');
-    font-weight: normal;  
-    font-style: normal;
-}
-
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'main_icon';
-    src: url('../font/main_icon.svg?78352389#main_icon') format('svg');
-  }
-}
-*/
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
     font-family: "main_icon";
