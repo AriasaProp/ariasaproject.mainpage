@@ -1,4 +1,4 @@
 <?php
-header("Location: menu/dasboard.html");
+header("Location: menu/dashboard.html");
 exit;
 ?>
