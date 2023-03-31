@@ -41,6 +41,7 @@ input.sidenav {
 }
 
 header {
+	height: 70px;
 	display: block;
 }
 
