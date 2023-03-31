@@ -1,5 +1,5 @@
 
 <?php
-header("Location: dasboard.html");
+header("Location: menu/dasboard.html");
 exit;
 ?>
