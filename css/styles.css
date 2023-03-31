@@ -36,16 +36,15 @@ title {
 	align: center;
 }
 
-header {
-	height: 64px;
-	display: block;
-}
-
 input.sidenav {
 	display: none;
 }
 
-nav {
+header {
+	display: block;
+}
+
+header nav {
 	user-select: none;
 	display: inline;
 	margin: 0;
@@ -57,7 +56,7 @@ nav {
 	line-height: 54px;
 }
 
-nav span {
+header nav span {
 	font-family: Fantasy;
 	display: inline-block;
 	font-size: 20pt;
@@ -67,11 +66,11 @@ nav span {
 	text-decoration: none;
 }
 
-nav label {
+header nav label {
 	display: none;
 }
 
-nav div {
+header nav div {
 	font-size: 15pt;
 	float: right;
 	display: inline-block;
@@ -80,7 +79,7 @@ nav div {
 	padding: 0;
 }
 
-nav div a {
+header nav div a {
 	font-family: Fantasy;
 	display: inline-block;
 	font-style: bold;
@@ -90,16 +89,12 @@ nav div a {
 	padding: 0 15px;
 }
 
-nav div > a:hover {
+header nav div > a:hover {
 	background-color: #ffffffaa;
 }
 
-nav div > a li {
+header nav div > a li {
 	display: inline;
-}
-
-header {
-	display: block;
 }
 
 content {
@@ -136,13 +131,13 @@ footer {
 
 
 @media screen and (max-width: 900px) {
-	nav label {
+	header nav label {
 		float: right;
 		display: inline-block;
 		padding: 4px 10px;
 	}
 
-	nav label span {
+	header nav label span {
 		display: block;
 		padding: 0;
 		width: 36px;
@@ -155,28 +150,28 @@ footer {
 		transition: 0.22s cubic-bezier(0.77,0.2,0.05,1.0);
 	}
 
-	nav label:hover {
+	header nav label:hover {
 		background-color: #ffffffaa;
 	}
 
-	nav div > a {
+	header nav div > a {
 		display: block;
 	}
-	nav div {
+	header nav div {
 		display: none;
 		width: 100%;
 	}
 
-	input.sidenav:checked ~ nav label span:first-child {
+	input.sidenav:checked ~ header nav label span:first-child {
 		transform: translate(0, 12px) rotate(-45deg);
 	}
-	input.sidenav:checked ~ nav label span:nth-child(2) {
+	input.sidenav:checked ~ header nav label span:nth-child(2) {
 		opacity: 0;
 	}
-	input.sidenav:checked ~ nav label span:last-child {
+	input.sidenav:checked ~ header nav label span:last-child {
 		transform: translate(0, -12px) rotate(45deg);
 	}
-	input.sidenav:checked ~ nav div {
+	input.sidenav:checked ~ header nav div {
 		display: block;
 	}
 
