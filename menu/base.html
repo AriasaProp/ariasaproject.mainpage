@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh Halaman dengan Header, Footer, dan Tiga Bagian Konten</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Buat CSS untuk mengatur tampilan halaman -->
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+			background-color: #f5f5f5;
+		}
+		
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+		
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 50px;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		
+		.side {
+			flex: 1;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		
+		.main {
+			flex: 2;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		
+		.property {
+			flex: 1;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		
+		@media screen and (max-width: 768px) {
+			.container {
+				flex-direction: column;
+			}
+			
+			.side, .main, .property {
+				flex: 0 0 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Header</h1>
+	</header>
+	
+	<div class="container">
+		<div class="side">
+			<h2>Side Content</h2>
+			<p>Isi konten sisi.</p>
+		</div>
+		
+		<div class="main">
+			<h2>Main Content</h2>
+			<p>Isi konten utama.</p>
+			<div>
+				<span style="background: red; height: 10000px;"></span>
+			</div>
+		</div>
+		
+		<div class="property">
+			<h2>Property</h2>
+			<p>Waktu: <span id="time"></span></p>
+			<button id="theme-switch">Ganti Tema</button>
+		</div>
+	</div>
+	
+	<footer>
+		<p>Pembuat: Nama Anda | Email: emailanda@contoh.com</p>
+	</footer>
+</body>
+</html>
