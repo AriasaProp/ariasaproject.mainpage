@@ -101,10 +101,17 @@ header nav div > a li {
 content {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: nowrap;
 }
 
 content div.ext {
-	width: 200px;
+	display: flex;
+	flex-direction: column;
+	width: 150px;
+}
+content div.ext div {
+	width: 150px;
+	height: 150px;
 }
 content div.main {
 	background: #00000022;
@@ -117,7 +124,8 @@ content div.time {
 }
 
 content div.time svg {
-	border: 2px solid red;
+	width: 150px;
+	height: 150px;
 }
 
 content h1 {
@@ -139,8 +147,30 @@ footer {
 	text-align: center;
 }
 
+@media screen and (prefers-color-scheme: dark) {
+	
+}
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
+	content {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+	content div {
+		display: flex;
+	}
+	content div.ext {
+		flex-direction: row;
+	}
+	content div.main {
+		flex-direction: column;
+		background: #00000022;
+		flex-grow: 1;
+	}
+	content div.time {
+		flex-direction: row;
+	}
 	header nav label {
 		float: right;
 		display: inline-block;
@@ -183,10 +213,6 @@ footer {
 	}
 	input.sidenav:checked ~ header nav div {
 		display: block;
-	}
-
-	content {
-		flex-direction: column;
 	}
 }
 
