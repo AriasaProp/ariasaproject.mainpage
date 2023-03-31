@@ -167,16 +167,16 @@ footer {
 		width: 100%;
 	}
 
-	input.sidenav:checked ~ header nav label span:first-child {
+	input.sidenav:checked ~ nav label span:first-child {
 		transform: translate(0, 12px) rotate(-45deg);
 	}
-	input.sidenav:checked ~ header nav label span:nth-child(2) {
+	input.sidenav:checked ~ nav label span:nth-child(2) {
 		opacity: 0;
 	}
-	input.sidenav:checked ~ header nav label span:last-child {
+	input.sidenav:checked ~ nav label span:last-child {
 		transform: translate(0, -12px) rotate(45deg);
 	}
-	input.sidenav:checked ~ header nav div {
+	input.sidenav:checked ~ nav div {
 		display: block;
 	}
 

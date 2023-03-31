@@ -1,4 +1,5 @@
 <?php
+// Redirect to dashboard.html
 header("Location: menu/dashboard.html");
-exit;
+exit; // Make sure nothing else is executed after redirecting
 ?>
