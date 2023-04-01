@@ -104,13 +104,21 @@ content {
 }
 
 content div.ext {
-	
+	width: 200px;
 }
 content div.main {
 	background: #00000022;
 	flex-grow: 1;
 }
-content div.time {}
+content div.time {
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+}
+
+content div.time svg {
+	border: 2px solid red;
+}
 
 content h1 {
 	font-family: Times New Roman;
@@ -125,7 +133,8 @@ content p {
 }
 
 footer {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	font-family: Ubuntu,sans-serif;
 	text-align: center;
 }
@@ -179,24 +188,6 @@ footer {
 	content {
 		flex-direction: column;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 

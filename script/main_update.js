@@ -1,5 +1,5 @@
-var datetimeSpan = document.getElementById('datetime');
-
+//first time
+var datetimeSpan = document.getElementById('date_time');
 var hourTick = document.getElementById('hour-tick');
 var minuteTick = document.getElementById('minute-tick');
 
@@ -12,11 +12,12 @@ const dateFormat = {
 
 update();
 let nIntervId = setInterval(update(), 1000); // per minutes = 60000 ms
-window.addEventListener('beforeunload', function(){
+window.addEventListener('unload', function(){
 	clearInterval(nIntervId);
 });
 
 function update() {
+	fetch('../data.txt').then(response => response.text()).then(text => document.getElementById('data_updated').innerHTML = text);
 	let d = new Date();
 	datetimeSpan.innerHTML = d.toLocaleString('id', dateFormat);
 	let secp = 6.0 * d.getSeconds();
