@@ -96,9 +96,11 @@ header nav ul {
 	margin: 0;
 	padding: 0;
 }
-
 header nav ul li {
 	display: inline-block;
+}
+header nav ul li:active {
+  background-color: var(--scheme-color2);
 }
 header nav ul li a {
 	display: inline-block;
@@ -117,7 +119,7 @@ content {
 	flex-wrap: nowrap;
 }
 content div {
-  background-color: #0004;
+  background-color: var(--scheme-color1);
 }
 content div.ext {
 	display: flex;
@@ -175,9 +177,6 @@ footer {
     --color-blue: #039;
     --color-red: #c00;
   }
-  content div {
-    background-color: #fff4;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -229,7 +228,6 @@ footer {
 		display: none;
 		width: 100%;
 	}
-
 	input.sidenav:checked ~ header nav div label span:first-child {
 		transform: translate(0, 10px) rotate(-45deg);
 	}
