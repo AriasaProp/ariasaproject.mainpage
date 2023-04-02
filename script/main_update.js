@@ -1,5 +1,4 @@
 //first time
-var datetimeSpan = document.getElementById('date_time');
 var hourTick = document.getElementById('hour-tick');
 var minuteTick = document.getElementById('minute-tick');
 //setelah jendela dimuat
@@ -9,11 +8,10 @@ window.addEventListener('load', function(){
 //menghandle update per menit
 window.addEventListener('resize', function(){
 });
-window.addEventListener('unload', function(){
-});
 window.addEventListener('error', function(){
 });
 window.addEventListener('message', function(){
+	updateTheme();
 });
 window.addEventListener('offline', function(){
 });
@@ -21,7 +19,9 @@ window.addEventListener('online', function(){
 });
 let nIntervId;
 window.addEventListener('focus', function(){
-	nIntervId = setInterval(update(), 1000); // per minutes = 60000 ms
+	nIntervId = setInterval(() => {
+	  update(new Date())
+	}, 1000); // per minutes = 60000 ms
 });
 window.addEventListener('blur', function(){
 	clearInterval(nIntervId);
@@ -33,15 +33,7 @@ window.addEventListener('beforeunload', function(){
 window.addEventListener('unload', function(){
 });
 
-const dateFormat = {
-	weekday: 'long',
-	day: '2-digit',
-	month: 'short',
-	year: 'numeric'
-};
-function update() {
-	let d = new Date();
-	datetimeSpan.innerHTML = d.toLocaleString('id', dateFormat);
+function update(d) {
 	let secp = 6.0 * d.getSeconds();
 	let mntp = 6.0 * d.getMinutes() + secp / 60.0;
 	let hourp = 30.0 * d.getHours() + mntp / 12.0;
@@ -62,4 +54,15 @@ function updateTheme() {
 		isDarkTheme = darkTheme;
 	}
 }
-update();
+//update day
+
+const d = new Date();
+const locale = window.navigator.language;
+const optionsDay = { weekday: 'long' };
+document.getElementById('day-name').innerHTML = d.toLocaleDateString(locale, optionsDay);
+const optionsDate = { day: 'numeric' };
+document.getElementById('date-day').innerHTML = d.toLocaleDateString(locale, optionsDate);
+const optionsMY = { month: 'short', year: 'numeric' };
+document.getElementById('date-my').innerHTML = d.toLocaleDateString(locale, optionsMY);
+
+update(d);
