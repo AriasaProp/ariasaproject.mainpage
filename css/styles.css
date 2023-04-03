@@ -98,9 +98,10 @@ header nav ul {
 }
 
 header nav ul li {
-	display: inline;
+	display: inline-block;
 }
 header nav ul li a {
+	display: inline-block;
 	font-family: Fantasy;
 	font-style: bold;
 	font-weight: 10px;
