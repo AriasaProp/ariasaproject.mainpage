@@ -101,7 +101,6 @@ header nav ul li {
 	display: inline;
 }
 header nav ul li a {
-	display: block;
 	font-family: Fantasy;
 	font-style: bold;
 	font-weight: 10px;
@@ -224,7 +223,7 @@ footer {
 		opacity: 1;
 		transition: 0.42s cubic-bezier(0.77,0.2,0.05,1.0);
 	}
-	header nav ul > li a {
+	header nav ul > li {
 		display: block;
 	}
 	header nav ul {
