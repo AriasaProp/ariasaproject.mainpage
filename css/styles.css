@@ -9,22 +9,24 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+/*for light*/
 :root {
-  --scheme-color: #000;
-  --scheme-color0: #fff;
-  --scheme-color1: #eee;
-  --scheme-color2: #ddd;
-  --scheme-color3: #ccc;
-  --scheme-color4: #bbb;
-  --scheme-color5: #aaa;
+  --scheme-color: #000; /* opposite */
+  --scheme-color0: #fff; /* equal */
+  --scheme-color1: #eee;  /* very low */
+  --scheme-color2: #ddd;  /* low */
+  --scheme-color3: #ccc;  /* medium */
+  --scheme-color4: #bbb;  /* high */
+  --scheme-color5: #aaa;  /* very high */
+  --color-blue: #6ff;  /* blue */
+  --color-red: #f30;  /* red */
 }
 
 html {
 	margin: 0;
 	padding: 0;
-	background-color: #fff;
-	color: #000;
+	background-color: var(--scheme-color0);
+	color: var(--scheme-color);
 }
 
 body {
@@ -61,8 +63,8 @@ header nav {
 	flex-direction: row;
 	justify-content: space-between;
 	margin: 0;
-	color: black;
-	background: #ccc;
+	color: var(--scheme-color);
+	background: var(--scheme-color3);
 	position: fixed;
 	z-index: 1;
 	width: 100%;
@@ -84,11 +86,9 @@ header nav div span {
 	padding: 0 0 0 5px;
 	text-decoration: none;
 }
-
 header nav div label {
 	display: none;
 }
-
 header nav ul {
 	font-size: 15pt;
 	display: inline-block;
@@ -108,6 +108,9 @@ header nav ul li a {
 	margin: 0;
 	padding: 0 10px;
 }
+header nav ul li a:visited {
+  color: inherit;
+}
 content {
 	display: flex;
 	flex-direction: row;
@@ -118,6 +121,7 @@ content div {
 }
 content div.ext {
 	display: flex;
+	flex-direction: column;
 	flex-direction: column;
 	width: 150px;
 }
@@ -168,14 +172,8 @@ footer {
     --scheme-color3: #333;
     --scheme-color4: #444;
     --scheme-color5: #555;
-  }
-  html {
-  	background-color: #000;
-  	color: #fff;
-  }
-  header nav {
-  	color: #fff;
-  	background: #111;
+    --color-blue: #039;
+    --color-red: #c00;
   }
   content div {
     background-color: #fff4;
@@ -218,7 +216,7 @@ footer {
 		width: 30px;
 		height: 5px;
 		margin: 5px 0;
-		background-color: #ffffff;
+		background-color: var(--scheme-color);
 		border-radius: 2.5px;
 		transform-origin: center;
 		opacity: 1;
