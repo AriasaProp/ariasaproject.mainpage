@@ -1,11 +1,20 @@
-name: Delete Environment (default settings)
+name: Cleaning Workflows
 
-on: [workflow_dispatch]
+on: workflow_dispatch
 
 jobs:
-  delete:
+  clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: strumwolf/delete-deployment-environment@v2
+      - uses: actions/checkout@v3.5.2
+      - name: Delete workflow runs
+        run: |
+          while OT=$(gh api repos/AriasaProp/TechnoWar/actions/runs --jq '.workflow_runs[] | .id');[ -n "$OT" ]; do
+            for run_id in $OT; do
+              gh api repos/AriasaProp/TechnoWar/actions/runs/$run_id --method DELETE;
+            done;
+          done;
+      - name: Clean Artifact
+        uses: glassechidna/artifact-cleaner@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          minimumAge: 360
