@@ -2,106 +2,73 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>AriasaProp - Index</title>
+	<title>Preferences</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<link rel="stylesheet" href="css/main-style.css">
-	<style type="text/css">
+	<style>
 #header {
-	color: white;
-	min-height: 125vh;
-	--cover: #fff7;
-	--cover1: #fff0;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	width: 100%;
-	position: relative;
-	display: flex;
-	align-items: center;
-  background-image: url(img/sample-wide-image.webp);
-}
-#header:after {
-  content: '';
   display: block;
-  position: absolute;
-  width: 100%;
-  height: 45vh;
-  bottom: -.01vh;
-  background: linear-gradient(0deg, var(--body) 0.5%, #fff0 99.5%);
+  height: 150px;
 }
-
-.nav-present {
-	flex-direction: column;
-	position: relative;
-	padding: 0;
-	background-color: transparent;
-	box-shadow: none;
-	flex-wrap: nowrap;
-	flex-grow: 1;
-	margin: 10px;
+* {
+	/*outline: 1px solid lightgreen;*/
 }
-.nav-present > #nav-head {
-	font-size: 25vmin;
-  margin: 0;
-}
-.nav-present > #nav-menu {
-	margin-top: 30px;
-	order: 1;
-}
-.nav-present > #nav-menu a {
-	font-size: 24pt;
-	mix-blend-mode: difference;
-}
-.nav-present > #nav-search {
-  font-size: 20pt;
-  display: flex;
-  max-width: 900px;
-  width: 100%;
-}
-.nav-present > #nav-menu #nav-search-switch {
-  display: none;
-}
-
 #container {
-  font-family: 'Poppins';
-	padding: 15px;
 }
-#container p {
-	text-align: justify;
-	text-indent: 40px;
+#container h1 {
+	text-align: center;
 }
-#container > h1 {
-  text-align: center;
-}
-#contents {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
-  grid-auto-rows: 200px;
+
+#themeCntr {
+  display: flex;
   justify-content: center;
-  grid-gap: 25px 25px;
-  width: 100%;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin: 1rem;
+  background-color: #3337;
+  box-shadow: 0 0 5px #3337;
+  border-radius: 15px;
 }
-#contents a {
-  font-weight: 700;
+#themeCntr input {
   text-align: center;
-  display: block;
-  color: black;
-  align-items: center;
-  background-color: white;
-  box-shadow: 0 0 1rem #0003;
-  transition: 0.3s;
-  padding: auto;
-  border-radius: 5px; /* 5px rounded corners */
-  font-size: 20pt;
+  margin: 15px;
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  position: relative;
+  color: var(--fontColor);
 }
-#contents a i {
-  font-size: 7rem;
-  display: block;
-  margin: 0;
+#themeCntr input:before {
+  content: '';
+  width: 75px;
+  height: 75px;
+  border-radius: 37.5px;
+  display: inline-block;
+  position: relative;
+  background-color: var(--tmc, white);
+  border: 2px solid transparent;
 }
+#themeCntr input:checked:before {
+  font-family: "main-icons";
+  font-style: normal;
+  font-size: 25pt;
+  border: 3px solid;
+  speak: never;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  content: '\e807';
+  text-align: right;
+}
+
 @media screen and (prefers-color-scheme: dark) {
-  #header {
-	  --cover: #0008;
+  #themeCntr input {
+    color: var(--fontColorDark);
+  }
+  #themeCntr input:before {
+    background-color: var(--tmcd, black);
   }
 }
 	</style>
@@ -123,18 +90,18 @@
   <span>Blocked</span>
 </noscript>
 <body>
-	<div id="header" loading="lazy">
+	<div id="header">
 		<nav id="nav-main" role="navigation">
-			<a id="nav-head">Home</a>
-	    <input type="checkbox" id="search-switch" class="hide"></input>
+		  <a id="nav-head">Preferences</a>
+      <input type="checkbox" id="search-switch" class="hide"></input>
 			<div id="nav-menu">
+				<a href="index.html">
+					<i>&#xe800;</i>
+					<span class="hide-on-small">Home</span>
+				</a>
 				<a href="updates.html">
 					<i>&#xf1ea;</i>
 					<span class="hide-on-small">Updates</span>
-				</a>
-				<a href="preferences.html">
-					<i>&#xe803;</i>
-					<span class="hide-on-small">Preferences</span>
 				</a>
 				<a href="aboutme.html">
 					<i>&#xe801;</i>
@@ -149,29 +116,15 @@
 		</nav>
 	</div>
 	<div id="container">
-		<h1>Contents</h1>
-		<div id="contents">
-		  <a href="content/game/sample-game.html">
-		    <i>&#xf11b;</i>
-  		  <span>Game</span>
-		  </a>
-		  <a>
-		    <i>&#xe804;</i>
-  		  <span>Art</span>
-		  </a>
-		  <a>
-		    <i>&#xe806;</i>
-  		  <span>Informations</span>
-		  </a>
-		  <a>
-		    <i>&#xe805;</i>
-  		  <span>None</span>
-		  </a>
-		  <a>
-		    <i>&#xf0ae;</i>
-  		  <span>Task</span>
-		  </a>
+		<h1>Preferences</h1>
+		<h3>Theme : </h3>
+		<div id="themeCntr">
+		  <template>
+  		  <input type="radio" name="themeopt" onclick="setThemeVar(this.value)"></input>
+		  </template>
 		</div>
+		<br>
+		<h3>Game : </h3>
 	</div>
 	<div id="footer">
 	  <div>
@@ -206,7 +159,7 @@
         <text id="date-day" x="300" y="80" fill="var(--font)" font-size="84" font-weight="bold" text-anchor="middle" dy=".6em">12</text>
         <text id="date-my" x="300" y="155" fill="var(--font)" font-size="28" font-weight="bold" text-anchor="middle" dy=".6em">Jan 2023</text>
       </svg>
-  	</div>
+	  </div>
 	  <div>
   		<h2>Author</h2>
   		<a href="mailto:ikomangwidiadaariasa12@gmail.com">
@@ -222,14 +175,33 @@
 	</div>
 </body>
 <script type="text/javascript">
-const nav = document.getElementById('nav-main')
-var intersect = new IntersectionObserver(entries => {
-	entries.forEach(entry => {
-		nav.classList.toggle('nav-present', entry.isIntersecting)
-	})
-}, {
-	threshold: .5,
-}).observe(document.getElementById('header'))
+function setThemeVar(key) {
+  if(localStorage.getItem('theme') === key) return
+  localStorage.setItem('theme', key)
+  updateStyling()
+}
+document.addEventListener("DOMContentLoaded", () => {
+  var curTheme = localStorage.getItem("theme")
+  fetch("./data/themes.json").then(response => response.json())
+  .then(themeData => {
+    const cntr = document.getElementById("themeCntr")
+    const part = cntr.getElementsByTagName("template")[0].content
+    for (var i = 0; i < themeData.length; ++i) {
+      var a = themeData[i].split("#")
+      a = a.filter((j) => { return j !== ""})
+      for (let j = 0; j < a.length; ++j)
+        a[j] = "#" + a[j]
+      let clon = part.cloneNode(true)
+      let chil = clon.children[0]
+      cntr.appendChild(clon)
+      chil.style.setProperty("--tmc", a[0])
+      chil.style.setProperty("--tmcd", a[4])
+      chil.value = themeData[i]
+      if (curTheme === null && i === 0) chil.defaultChecked = true
+      else if (curTheme === themeData[i]) chil.defaultChecked = true
+    }
+  })
+})
 </script>
 </html>
 

@@ -2,110 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>AriasaProp - Index</title>
+	<title>About Me!</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<link rel="stylesheet" href="css/main-style.css">
+  <script type="text/javascript" src="script/preload.js"></script>
 	<style type="text/css">
 #header {
-	color: white;
-	min-height: 125vh;
-	--cover: #fff7;
-	--cover1: #fff0;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	width: 100%;
-	position: relative;
-	display: flex;
-	align-items: center;
-  background-image: url(img/sample-wide-image.webp);
-}
-#header:after {
-  content: '';
   display: block;
-  position: absolute;
-  width: 100%;
-  height: 45vh;
-  bottom: -.01vh;
-  background: linear-gradient(0deg, var(--body) 0.5%, #fff0 99.5%);
+  height: 150px;
 }
-
-.nav-present {
-	flex-direction: column;
-	position: relative;
-	padding: 0;
-	background-color: transparent;
-	box-shadow: none;
-	flex-wrap: nowrap;
-	flex-grow: 1;
-	margin: 10px;
-}
-.nav-present > #nav-head {
-	font-size: 25vmin;
-  margin: 0;
-}
-.nav-present > #nav-menu {
-	margin-top: 30px;
-	order: 1;
-}
-.nav-present > #nav-menu a {
-	font-size: 24pt;
-	mix-blend-mode: difference;
-}
-.nav-present > #nav-search {
-  font-size: 20pt;
-  display: flex;
-  max-width: 900px;
-  width: 100%;
-}
-.nav-present > #nav-menu #nav-search-switch {
-  display: none;
-}
-
 #container {
-  font-family: 'Poppins';
-	padding: 15px;
+	padding: 30px;
 }
 #container p {
 	text-align: justify;
 	text-indent: 40px;
 }
-#container > h1 {
-  text-align: center;
-}
-#contents {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
-  grid-auto-rows: 200px;
-  justify-content: center;
-  grid-gap: 25px 25px;
-  width: 100%;
-}
-#contents a {
-  font-weight: 700;
-  text-align: center;
-  display: block;
-  color: black;
-  align-items: center;
-  background-color: white;
-  box-shadow: 0 0 1rem #0003;
-  transition: 0.3s;
-  padding: auto;
-  border-radius: 5px; /* 5px rounded corners */
-  font-size: 20pt;
-}
-#contents a i {
-  font-size: 7rem;
-  display: block;
-  margin: 0;
-}
-@media screen and (prefers-color-scheme: dark) {
-  #header {
-	  --cover: #0008;
-  }
-}
 	</style>
-  <script type="text/javascript" src="script/preload.js"></script>
 </head>
 <noscript>
   <style>
@@ -123,11 +36,15 @@
   <span>Blocked</span>
 </noscript>
 <body>
-	<div id="header" loading="lazy">
+	<div id="header">
 		<nav id="nav-main" role="navigation">
-			<a id="nav-head">Home</a>
-	    <input type="checkbox" id="search-switch" class="hide"></input>
+		  <a id="nav-head">About Me</a>
+      <input type="checkbox" id="search-switch" class="hide"></input>
 			<div id="nav-menu">
+				<a href="index.html">
+					<i>&#xe800;</i>
+					<span class="hide-on-small">Home</span>
+				</a>
 				<a href="updates.html">
 					<i>&#xf1ea;</i>
 					<span class="hide-on-small">Updates</span>
@@ -135,10 +52,6 @@
 				<a href="preferences.html">
 					<i>&#xe803;</i>
 					<span class="hide-on-small">Preferences</span>
-				</a>
-				<a href="aboutme.html">
-					<i>&#xe801;</i>
-					<span class="hide-on-small">About Me</span>
 				</a>
 				<label id="nav-search-switch" for="search-switch"></label>
 			</div>
@@ -149,29 +62,16 @@
 		</nav>
 	</div>
 	<div id="container">
-		<h1>Contents</h1>
-		<div id="contents">
-		  <a href="content/game/sample-game.html">
-		    <i>&#xf11b;</i>
-  		  <span>Game</span>
-		  </a>
-		  <a>
-		    <i>&#xe804;</i>
-  		  <span>Art</span>
-		  </a>
-		  <a>
-		    <i>&#xe806;</i>
-  		  <span>Informations</span>
-		  </a>
-		  <a>
-		    <i>&#xe805;</i>
-  		  <span>None</span>
-		  </a>
-		  <a>
-		    <i>&#xf0ae;</i>
-  		  <span>Task</span>
-		  </a>
-		</div>
+		<h1>About Me</h1>
+		<p>
+			I am by no means an expert in full-stack web development. I also have no background in programming or any knowledge of server technology whatsoever. Whether it"s my educational background, courses, or acquaintances, I have no one with a deep understanding of web development.
+		</p>
+		<p>
+			My goal in creating this web design is to apply various information related to web development implementation, including HTML, CSS, JavaScript, and more. My practice in this field is still quite limited. Currently, I only work on it in my spare time as an additional hobby.
+		</p>
+		<p>
+			Thank you for visiting my "About Me" page. I"m thrilled to share my journey, experiences, and insights with you through this blog. Feel free to reach out if you have any questions or would like to share your thoughts. I hope you enjoy the content on my blog. I greatly appreciate any feedback and criticism. That"s all for now.
+		</p>
 	</div>
 	<div id="footer">
 	  <div>
@@ -221,15 +121,5 @@
 	  <br/>
 	</div>
 </body>
-<script type="text/javascript">
-const nav = document.getElementById('nav-main')
-var intersect = new IntersectionObserver(entries => {
-	entries.forEach(entry => {
-		nav.classList.toggle('nav-present', entry.isIntersecting)
-	})
-}, {
-	threshold: .5,
-}).observe(document.getElementById('header'))
-</script>
 </html>
 

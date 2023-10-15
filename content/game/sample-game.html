@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Game: Sample Game</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link rel="stylesheet" href="../../css/main-style.css">
+  <script type="text/javascript" src="../../script/preload.js"></script>
+  <script type="text/javascript" src="../../script/sample-game.js" defer></script>
+	<style type="text/css">
+#header {
+  display: block;
+  height: 150px;
+}
+#container {
+  width: 100vw;
+  max-height: 100vh;
+  height: 56.25vw;
+  max-width: 177.78vh;
+}
+	</style>
+</head>
+<noscript>
+  <style>
+    #header, #container, #footer {
+      display: none;
+    }
+    span {
+      background-color: black; color: white;
+      z-index: 1000; display: block; position: fixed;
+      left: 0; right: 0; top: 0; bottom: 0;
+      font-style: bold; font-size: 50pt;
+      text-align: center;
+    }
+  </style>
+  <span>Blocked</span>
+</noscript>
+<body>
+	<div id="header">
+		<nav id="nav-main" role="navigation">
+		  <a id="nav-head">Sample Game</a>
+      <input type="checkbox" id="search-switch" class="hide"></input>
+			<div id="nav-menu">
+				<a href="../../index.html">
+					<i>&#xe800;</i>
+					<span class="hide-on-small">Home</span>
+				</a>
+				<a href="../../updates.html">
+					<i>&#xf1ea;</i>
+					<span class="hide-on-small">Updates</span>
+				</a>
+				<a href="../../preferences.html">
+					<i>&#xe803;</i>
+					<span class="hide-on-small">Preferences</span>
+				</a>
+				<label id="nav-search-switch" for="search-switch"></label>
+			</div>
+			<form id="nav-search">
+			  <input type="search" placeholder="Search">
+			  <button type="submit"><i>&#xe802;</i></button>
+			</form>
+		</nav>
+	</div>
+	<canvas id="container" width="1280" height="720"></canvas>
+	<div id="footer">
+		<h2>Account</h2>
+		<a href="mailto:ikomangwidiadaariasa12@gmail.com">
+		  <i>&#xf0e0;</i>ikomangwidiadaariasa12@gmail.com
+		</a>
+		<a href="https://github.com/AriasaProp">
+		  <i>&#xf09b;</i>AriasaProp
+		</a>
+	</div>
+</body>
+</html>
+
