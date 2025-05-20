@@ -1,0 +1,51 @@
+main {}
+main h1 {
+	text-align: center;
+}
+main div {
+  display: block;
+  justify-content: center;
+  align-items: center;
+	text-align: center;
+  padding: 15px;
+  background-color: #3337;
+  box-shadow: 0 0 5px #3337;
+  border-radius: 15px;
+  margin: 25px;
+}
+main div p {
+  display: block;
+}
+main div input[type='radio'] {
+  text-align: center;
+  align-items: center;
+  margin: 4px;
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  position: relative;
+}
+main div input[type='radio']:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+  background-color: var(--tmc, white);
+}
+main div input[type='radio']:checked:after {
+  content: '\e805';
+  color: var(--font);
+  font-family: 'ic';
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 2em;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  main div input[type='radio']:before {
+    background-color: var(--tmcd, black);
+  }
+}

@@ -1,0 +1,47 @@
+body {
+  height: 100%;
+  flex-direction: column;
+	background-size: cover;
+	background-repeat: no-repeat;
+  background-image: url(../img/background.svg);
+}
+header {
+	color: white;
+	width: 100%;
+}
+header nav {
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	background-color: transparent;
+	box-shadow: none;
+	flex-wrap: nowrap;
+	margin: 5px;
+	margin-top: 50px;
+}
+header nav #nav-menu {
+  display: inline-block;
+	margin-top: 0;
+}
+header nav #nav-menu a {
+  display: inline-block;
+	text-shadow: 2px 2px 2px black;
+}
+header nav form {
+  display: flex;
+  margin-bottom: 0;
+  max-width: 98%;
+}
+main {
+  flex-grow: 1;
+}
+
+
+/* while screen short */
+@media screen and (max-width: 800px) {
+  
+}
+/* while screen wide */
+@media screen and (min-width: 800px) {
+  
+}

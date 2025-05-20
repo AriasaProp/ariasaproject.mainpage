@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	x="0%" y="0%"
+	width="100%" height="100%"
+	viewBox="0 0 720.0 1600.0"
+	enable-background="new 0 0 720.0 1600.0"
+	xml:space="preserve">
+<defs>
+<filter id="glow7" x="-200%" y="-200%" width="600%" height="600%" >
+	<feOffset result="offOut" in="SourceGraphic" dx="-2.9420494E-6" dy="67.306244" />
+	<feGaussianBlur result="blurOut" in="offOut" stdDeviation="15.836762" />
+	<feFlood flood-color="#000000" flood-opacity="1.000" result="flood"/>
+	<feComposite in="flood" in2="blurOut" operator="in" result="blendOut0"/>
+	<feBlend in="SourceGraphic" in2="blendOut0" mode="normal" />
+</filter>
+
+<filter id="glow14" x="-200%" y="-200%" width="600%" height="600%" >
+	<feOffset result="offOut" in="SourceGraphic" dx="-2.9420494E-6" dy="67.306244" />
+	<feGaussianBlur result="blurOut" in="offOut" stdDeviation="15.836762" />
+	<feFlood flood-color="#000000" flood-opacity="1.000" result="flood"/>
+	<feComposite in="flood" in2="blurOut" operator="in" result="blendOut0"/>
+	<feBlend in="SourceGraphic" in2="blendOut0" mode="normal" />
+</filter>
+
+<filter id="glow27" x="-200%" y="-200%" width="600%" height="600%" >
+	<feOffset result="offOut" in="SourceGraphic" dx="-73.612816" dy="-6.4354367E-6" />
+	<feGaussianBlur result="blurOut" in="offOut" stdDeviation="47.848328" />
+	<feFlood flood-color="#000000" flood-opacity="1.000" result="flood"/>
+	<feComposite in="flood" in2="blurOut" operator="in" result="blendOut0"/>
+	<feBlend in="SourceGraphic" in2="blendOut0" mode="normal" />
+</filter>
+
+<filter id="glow28" x="-200%" y="-200%" width="600%" height="600%" >
+	<feOffset result="offOut" in="SourceGraphic" dx="-1.7857927E-6" dy="-40.854176" />
+	<feGaussianBlur result="blurOut" in="offOut" stdDeviation="17.508932" />
+	<feFlood flood-color="#000000" flood-opacity="1.000" result="flood"/>
+	<feComposite in="flood" in2="blurOut" operator="in" result="blendOut0"/>
+	<feBlend in="SourceGraphic" in2="blendOut0" mode="normal" />
+</filter>
+
+</defs>
+	<path
+		fill="#838383"
+		stroke="#000000"
+		fill-opacity="0.063"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.0"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M0.00,0.00L720.00,0.00L720.00,1600.00L0.00,1600.00z"/>
+	<path
+		fill="#FFFFFF"
+		stroke="#000000"
+		fill-opacity="1.000"
+		stroke-opacity="0.004"
+		fill-rule="nonzero"
+		stroke-width="0.0"
+		filter="url(#glow7)"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M0.00,110.00L246.31,347.51Q295.74,395.16,243.16,445.44L0.00,690.00L0.00,110.00z"/>
+	<path
+		fill="#FFFFFF"
+		stroke="#000000"
+		fill-opacity="1.000"
+		stroke-opacity="0.004"
+		fill-rule="nonzero"
+		stroke-width="0.0"
+		filter="url(#glow14)"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M-62.97,-39.65L183.34,197.86Q232.77,245.51,180.19,295.79L-62.97,540.35L-62.97,-39.65z"/>
+	<path
+		fill="#FFFFFF"
+		stroke="#000000"
+		fill-opacity="1.000"
+		stroke-opacity="0.004"
+		fill-rule="nonzero"
+		stroke-width="7.2"
+		filter="url(#glow27)"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M720.00,0.00L720.00,950.00Q724.11,1122.92,551.70,1045.94L345.15,947.60Q119.66,853.01,280.38,703.05L494.66,478.56Q617.66,364.15,441.92,175.15L250.00,0.00"/>
+	<path
+		fill="#FFFFFF"
+		stroke="#000000"
+		fill-opacity="1.000"
+		stroke-opacity="0.004"
+		fill-rule="nonzero"
+		stroke-width="7.2"
+		filter="url(#glow28)"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M0.00,1600.00C22.12,1466.39,44.25,1332.78,76.58,1313.42C108.91,1294.06,151.44,1388.95,179.37,1413.61C207.30,1438.27,220.62,1392.70,196.52,1320.81C172.43,1248.93,110.91,1150.74,140.23,1130.84C169.56,1110.95,289.72,1169.35,332.54,1243.08C375.36,1316.81,340.82,1405.87,378.00,1463.61C415.18,1521.34,524.06,1547.75,544.81,1515.23C565.56,1482.71,498.17,1391.26,487.11,1340.91C476.05,1290.56,521.32,1281.32,550.08,1296.67C578.83,1312.03,591.05,1351.99,616.62,1406.65C642.19,1461.30,681.09,1530.65,720.00,1600.00"/>
+</svg>

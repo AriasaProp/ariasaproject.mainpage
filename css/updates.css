@@ -1,0 +1,21 @@
+main {
+}
+main h1 {
+	text-align: center;
+}
+main ul {
+  display: block;
+	padding: 35px;
+}
+main ul li {
+  display: block;
+  font-size: 20pt;
+  background-color: var(--opposite);
+  border-radius: 25px;
+	padding: 20px;
+	margin: 10px 0;
+  box-shadow: 0 0 3px var(--opposite);
+}
+main ul li p {
+  text-indent: 1.7em;
+}
