@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>AriasaProp - About</title>
+	<!-- describe -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="AriasaProp">
+  <meta name="description" content="description for start developing.">
+	<!-- set -->
 	<meta charset="utf-8">
-	<title>About Me!</title>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="Content-Language" content="en">
 	<!-- provide source before web loaded -->
 	<link rel="preload" href="css/common.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="script/preload.js" as="script">
-	<link rel="preload" href="script/postload.js" as="script">
 	<!-- set source to web -->
   <noscript>
     <link rel="stylesheet" href="css/common.css">
   </noscript>
-  <link rel="stylesheet" href="css/aboutme.css">
+  <style>
+    body {
+    	background-size: 5000px;
+    	background-position: right center;
+    }
+    main {
+      margin: 10px;
+    }
+    main h1 {
+      text-align: center;
+    }
+    main p {
+      text-indent: 45px;
+      font-size: 0.65em;
+      text-align: justify;
+    }
+  </style>
   <script type="text/javascript" src="script/preload.js"></script>
 </head>
 <body>
   <noscript><span id="block">Blocked</span></noscript>
 	<header>
 		<nav role="navigation">
-			<a href="index.html" id="nav-head"><h3>AriasaProp</h3></a>
+			<a href="index.html"><h2>AriasaProp</h2></a>
+	    <span></span>
 	    <input type="checkbox" id="search-switch" class="hide"/>
 			<div id="nav-menu">
 				<a href="preferences.html"><i>&#xf1de;</i><span class="hide-on-small"> Preferences</span></a>
@@ -33,7 +54,7 @@
 		</nav>
 	</header>
 	<main>
-		<h1>About Me</h1>
+		<h3>About Me</h3>
 		<p>
 			I am by no means an expert in full-stack web development. I also have no background in programming or any knowledge of server technology whatsoever. Whether it"s my educational background, courses, or acquaintances, I have no one with a deep understanding of web development.
 		</p>
@@ -58,6 +79,5 @@
   	<p>Made for fun!</p>
 	</footer>
 </body>
-<script type="text/javascript" src="script/postload.js"></script>
 </html>
 

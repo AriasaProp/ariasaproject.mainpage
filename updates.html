@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>AriasaProp - Update Lists</title>
+	<!-- describe -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="AriasaProp">
+  <meta name="description" content="Share feature that added before.">
+	<!-- set -->
 	<meta charset="utf-8">
-	<title>Update Lists</title>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<link rel="stylesheet" href="css/main-style.css">
+  <meta http-equiv="Content-Language" content="en">
 	<!-- provide source before web loaded -->
 	<link rel="preload" href="css/common.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="script/preload.js" as="script">
-	<link rel="preload" href="script/postload.js" as="script">
 	<!-- set source to web -->
   <noscript>
     <link rel="stylesheet" href="css/common.css">
   </noscript>
-  <link rel="stylesheet" href="css/updates.css">
+  <style>
+    body {
+    	background-size: 3000px;
+    	background-position: left top;
+    }
+    main {}
+    main h1 {
+    	text-align: center;
+    }
+    main ul {
+      display: block;
+    	padding: 35px;
+    }
+    main ul li {
+    	text-align: left;
+      display: block;
+      background-color: var(--opposite);
+      border-radius: 20px;
+    	padding: 20px;
+    	margin: 5px 0;
+      box-shadow: 0 0 3px var(--opposite);
+    }
+    main ul li p {
+      text-indent: 20px;
+    }
+  </style>
   <script type="text/javascript" src="script/preload.js"></script>
 </head>
 <body>
   <noscript><span id="block">Blocked</span></noscript>
 	<header>
 		<nav role="navigation">
-			<a href="index.html" id="nav-head"><h3>AriasaProp</h3></a>
+			<a href="index.html"><h2>AriasaProp</h2></a>
+	    <span></span>
 	    <input type="checkbox" id="search-switch" class="hide"/>
 			<div id="nav-menu">
 				<a href="preferences.html"><i>&#xf1de;</i><span class="hide-on-small"> Preferences</span></a>
@@ -67,6 +96,5 @@
   	<p>Made for fun!</p>
 	</footer>
 </body>
-<script type="text/javascript" src="script/postload.js"></script>
 </html>
 
